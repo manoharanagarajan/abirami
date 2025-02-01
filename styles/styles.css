@@ -1,4 +1,4 @@
-/* Global Resets & Variables */
+/* Global Resets & Root Variables */
 * {
   margin: 0;
   padding: 0;
@@ -59,7 +59,7 @@ header {
   padding: 0 !important;
 }
 
-/* Section Transitions */
+/* Section Container & Transitions */
 section.container {
   position: absolute;
   top: 0;
@@ -87,7 +87,7 @@ section.container.fade-out {
   z-index: 0;
 }
 
-/* Controls & Theme Button */
+/* Navigation Controls & Theme Button */
 .controls {
   position: fixed;
   z-index: 10;
@@ -155,10 +155,19 @@ section.container.fade-out {
   grid-template-columns: 1fr 1fr;
   min-height: 100vh;
 }
+
+/* Ensure left-header is positioned relative for absolute positioning of image */
 .header-content .left-header {
-  display: flex;
-  align-items: center;
   position: relative;
+  /* Default order stays 0 for desktop */
+  order: 0;
+}
+.header-content .right-header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-right: 18rem;
+  order: 0;
 }
 .header-content .left-header .h-shape {
   transition: all 0.4s ease-in-out;
@@ -171,12 +180,14 @@ section.container.fade-out {
   z-index: -1;
   clip-path: polygon(0 0, 46% 0, 79% 100%, 0% 100%);
 }
+/* Hero image container: make background transparent and align its bottom with the green shape */
 .header-content .left-header .image {
-  border-radius: var(--br-sm-2);
-  height: 90%;
-  width: 68%;
-  margin-left: 4rem;
-  background-color: var(--color-black);
+  position: absolute;
+  bottom: 0;
+  left: 4rem;
+  width: 60%;      /* Adjust this value as needed for desktop */
+  max-height: 85%; /* Limit height so it doesn't extend too far */
+  background-color: transparent;
   transition: all 0.4s ease-in-out;
 }
 .header-content .left-header .image img {
@@ -189,12 +200,6 @@ section.container.fade-out {
 .header-content .left-header .image img:hover {
   filter: grayscale(0);
 }
-.header-content .right-header {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  padding-right: 18rem;
-}
 .header-content .right-header .name {
   font-size: 3rem;
 }
@@ -206,7 +211,7 @@ section.container.fade-out {
   line-height: 2rem;
 }
 
-/* About Section Enhancements */
+/* --- About Section Enhancements --- */
 .about-container {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -241,7 +246,7 @@ section.container.fade-out {
 .about-container .right-about .about-item {
   border: 1px solid var(--color-grey-5);
   border-radius: 5px;
-  transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease;
   box-shadow: 1px 2px 15px rgba(0, 0, 0, 0.1);
 }
 .about-container .right-about .about-item:hover {
@@ -261,11 +266,11 @@ section.container.fade-out {
 }
 .about-container .right-about .about-item .abt-text .small-text {
   padding-left: 3rem;
-  position: relative;
   text-transform: uppercase;
   font-size: 1.2rem;
   color: var(--color-grey-1);
   letter-spacing: 2px;
+  position: relative;
 }
 .about-container .right-about .about-item .abt-text .small-text::before {
   content: "";
@@ -547,7 +552,7 @@ section.container.fade-out {
   justify-content: flex-start;
 }
 
-/* Independed components */
+/* Independed Components */
 .btn-con {
   display: flex;
   align-self: flex-start;
@@ -614,8 +619,9 @@ section.container.fade-out {
   transition: all 0.4s ease-in-out;
 }
 
-/* --- Media Queries --- */
-/* Mobile adjustments */
+/* Media Queries */
+
+/* For Mobile Devices */
 @media screen and (max-width: 600px) {
   header {
     padding: 0 !important;
@@ -624,27 +630,32 @@ section.container.fade-out {
     width: 50px;
     height: 50px;
   }
+  /* Change header layout to column with text first */
   .header-content {
-    grid-template-columns: 1fr;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     padding-bottom: 6rem;
   }
-  .left-header .h-shape {
-    display: none;
-  }
-  .header-content .left-header .image {
-    width: 100%;
-    max-width: 300px;
-    margin: 0 auto;
-  }
-  .right-header {
-    padding-right: 0 !important;
-    width: 90%;
-    margin: 0 auto;
+  .header-content .right-header {
+    order: 1;
+    padding: 1rem 0;
     text-align: center;
+    width: 90%;
   }
-  .right-header .name {
-    font-size: 2.5rem !important;
-    padding-top: 2rem;
+  .header-content .left-header {
+    order: 2;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+    position: relative;
+  }
+  /* Reduce header image further for mobile */
+  .header-content .left-header .image {
+    width: 90%;
+    max-width: 180px;
+    margin: 0 auto;
   }
   .controls {
     top: auto;
@@ -692,9 +703,6 @@ section.container.fade-out {
     margin-left: 0;
     margin-top: 1.5rem;
   }
-  .contact-content-con .right-contact {
-    margin-bottom: 6rem;
-  }
   .main-title h2 {
     font-size: 2rem;
   }
@@ -706,7 +714,7 @@ section.container.fade-out {
   }
 }
 
-/* Medium to Large Screens */
+/* For Medium to Large Screens */
 @media screen and (max-width: 1432px) {
   section.container {
     padding: 7rem 11rem;

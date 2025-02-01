@@ -1,4 +1,4 @@
-// Immediately ensure the active section is visible on load
+// Ensure the active section is visible on load
 document.addEventListener("DOMContentLoaded", () => {
     const activeSection = document.querySelector('.container.active');
     if (activeSection) {
@@ -6,48 +6,68 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
   
-  // Tab switching and typing effect functionality
+  // Tab Switching & Typing Effect
   (function () {
     const controls = document.querySelectorAll('.control');
     let currentSection = document.querySelector('.container.active');
-    
+    const transitionDuration = 400; // 0.4s
+  
     controls.forEach(button => {
       button.addEventListener('click', function () {
-        // If the clicked button is already active, do nothing
+        // If this button is already active, do nothing
         if (this.classList.contains('active-btn')) return;
-        
+  
         // Update active button styling
         document.querySelector('.active-btn').classList.remove('active-btn');
         this.classList.add('active-btn');
-        
-        // Begin fade-out animation on the current section
+  
+        // Force reflow for currentSection to ensure transition starts
+        currentSection.offsetWidth;
+  
+        // Add fade-out class to currentSection
         currentSection.classList.add('fade-out');
-        
-        // Wait for the fade-out transition to complete (400ms)
-        setTimeout(() => {
+  
+        let called = false;
+        function onTransitionEnd(e) {
+          if (e.propertyName === 'opacity' && !called) {
+            called = true;
+            cleanup();
+          }
+        }
+        function cleanup() {
+          currentSection.removeEventListener('transitionend', onTransitionEnd);
           currentSection.classList.remove('active', 'fade-out');
           currentSection.style.visibility = 'hidden';
-          
-          // Activate the new section and make it visible
+  
+          // Activate new section
           const newSection = document.getElementById(button.dataset.id);
           newSection.style.visibility = 'visible';
+          newSection.offsetWidth; // Force reflow
           newSection.classList.add('active');
           currentSection = newSection;
-        }, 400);
+        }
+        currentSection.addEventListener('transitionend', onTransitionEnd, { once: true });
+  
+        // Fallback if transitionend doesn't fire
+        setTimeout(() => {
+          if (!called) {
+            cleanup();
+          }
+        }, transitionDuration + 50);
       });
     });
-    
-    // Toggle light/dark theme
+  
+    // Toggle Light/Dark Theme
     document.querySelector(".theme-btn").addEventListener("click", () => {
       document.body.classList.toggle("light-mode");
     });
-    
-    // Typing effect for header text
+  
+    // Typing Effect
     const typingElement = document.getElementById("typing");
     const text = "Abirami Sivakumar.";
     let index = 0;
-    const typingSpeed = 150; // milliseconds per character
-    
+    const typingSpeed = 150;
+  
     function type() {
       if (index < text.length) {
         typingElement.innerHTML += text.charAt(index);
@@ -55,8 +75,6 @@ document.addEventListener("DOMContentLoaded", () => {
         setTimeout(type, typingSpeed);
       }
     }
-    
-    // Start the typing effect after a short delay
     setTimeout(type, 500);
   })();
   
