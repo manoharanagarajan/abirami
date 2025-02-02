@@ -57,9 +57,9 @@ body {
   z-index: 99;
 }
 
-/* HERO SECTION WITH PARALLAX */
+/* HERO SECTION */
 .hero-section {
-  padding: 6rem 0 3rem; /* Reduced vertical padding */
+  padding: 6rem 0 3rem;
   background: url("../img/bg-header.png") no-repeat center top;
   background-size: cover;
   background-attachment: fixed;
@@ -101,7 +101,6 @@ body {
   margin: 0.3rem 0;
   font-size: 0.95rem;
 }
-/* Hero image: reduced size */
 .hero-img {
   max-width: 80%;
   height: auto;
@@ -119,7 +118,7 @@ body {
   z-index: -9999;
 }
 
-/* HERO IMAGE CONTAINER WITH ENHANCED GRADIENT OVERLAY */
+/* HERO IMAGE CONTAINER WITH GRADIENT OVERLAY */
 .hero-img-container {
   position: relative;
   display: inline-block;
@@ -130,14 +129,14 @@ body {
   bottom: 0;
   left: 0;
   width: 100%;
-  height: 300px; /* Increased height for a stronger gradient effect */
+  height: 300px;
   background: linear-gradient(to bottom, transparent 0%, var(--light) 100%);
   pointer-events: none;
 }
 
 /* ABOUT ME SECTION */
 #about-me {
-  padding: 4rem 0; /* Reduced vertical padding */
+  padding: 4rem 0;
 }
 #about-me .card {
   border: none;
@@ -176,7 +175,7 @@ body {
 
 /* EDUCATION SECTION */
 #education {
-  padding: 4rem 0; /* Reduced vertical padding */
+  padding: 4rem 0;
   background: #ffffff;
 }
 #education h1 {
@@ -202,7 +201,7 @@ body {
 
 /* INTERNSHIPS SECTION - Transparent Background */
 #internships {
-  padding: 4rem 0; /* Reduced vertical padding */
+  padding: 4rem 0;
   background: transparent;
 }
 #internships h1 {
@@ -210,7 +209,7 @@ body {
   text-align: center;
 }
 #internships .journey-card {
-  background: #fff; /* Opaque cards */
+  background: #fff;
   border: none;
   box-shadow: 0 2px 12px rgba(0,0,0,0.08);
   transition: transform 0.3s;
@@ -224,7 +223,7 @@ body {
 
 /* ACHIEVEMENTS SECTION */
 #achievements {
-  padding: 4rem 0; /* Reduced vertical padding */
+  padding: 4rem 0;
 }
 .achievement-card {
   border: none;
@@ -253,7 +252,7 @@ body {
 
 /* PROJECTS SECTION */
 #projects {
-  padding: 4rem 0; /* Reduced vertical padding */
+  padding: 4rem 0;
 }
 #portfolio-flters {
   list-style: none;
@@ -281,7 +280,6 @@ body {
   overflow: hidden;
   transition: transform 0.4s;
   box-shadow: 0 2px 12px rgba(0,0,0,0.08);
-  /* Reduce card size by using a max-width (if desired) or scale down the image */
   max-width: 350px;
   margin: auto;
 }
@@ -289,7 +287,6 @@ body {
   width: 100%;
   display: block;
   border-radius: 10px;
-  /* Reduce image height to make the card more compact */
   max-height: 200px;
   object-fit: cover;
 }
@@ -321,7 +318,7 @@ body {
 
 /* REFERENCES SECTION */
 #references {
-  padding: 4rem 0; /* Reduced vertical padding */
+  padding: 4rem 0;
 }
 .reference-block {
   border: none;
@@ -344,7 +341,7 @@ body {
 
 /* CONTACT SECTION */
 #contact {
-  padding: 4rem 0; /* Reduced vertical padding */
+  padding: 4rem 0;
 }
 #contact .form-control {
   border-radius: 0;
@@ -372,38 +369,60 @@ footer {
   text-align: center;
 }
 
-/* STICKY BOTTOM NAVIGATION BAR (ROUNDED) - Only Home, About, Internships, and Contact */
-.sticky-nav {
-  position: sticky;
-  bottom: 0;
-  width: 100%;
-  background: linear-gradient(135deg, #ffffff, #f9f9f9);
-  box-shadow: 0 -2px 8px rgba(0,0,0,0.1);
-  border-top-left-radius: 20px;
-  border-top-right-radius: 20px;
-  z-index: 100;
-  padding: 0.3rem 0;
-}
-.sticky-nav .nav {
-  margin: 0;
-}
-.sticky-nav .nav-link {
-  color: var(--dark);
-  font-size: 0.8rem;
-  padding: 0.5rem 0;
+/* NEW NAVIGATION CONTROLS - Using Anchor Tags */
+.controls {
+  position: fixed;
+  z-index: 1000;
+  top: 50%;
+  right: 3%;
   display: flex;
   flex-direction: column;
   align-items: center;
-  transition: color 0.3s, transform 0.3s;
+  transform: translateY(-50%);
 }
-.sticky-nav .nav-link i {
-  font-size: 0.8rem;
-  margin-bottom: 0.1rem;
+.controls a.control {
+  padding: 1rem;
+  text-decoration: none;
+  background-color: var(--primary); /* solid color for opaque buttons */
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0.7rem 0;
+  box-shadow: 0 3px 15px rgba(0, 0, 0, 0.3);
+  transition: all 0.4s ease-in-out;
 }
-.sticky-nav .nav-link:hover,
-.sticky-nav .nav-link.active {
-  color: var(--primary);
+.controls a.control i {
+  font-size: 1.2rem;
+  color: #fff;
+}
+.controls a.active-btn {
+  background-color: var(--secondary);
+}
+.theme-btn {
+  position: fixed;
+  top: 5%;
+  right: 3%;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background-color: var(--primary);
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 3px 15px rgba(0, 0, 0, 0.3);
+  transition: all 0.1s ease-in-out;
+}
+.theme-btn:active {
   transform: translateY(-3px);
+}
+.theme-btn i {
+  font-size: 1.4rem;
+  color: #fff;
+  pointer-events: none;
 }
 
 /* RESPONSIVE ADJUSTMENTS */
@@ -416,11 +435,26 @@ footer {
     display: block;
     margin: 1rem auto;
   }
-  .sticky-nav .nav-link {
-    font-size: 0.8rem;
-    padding: 1rem 0;
+  /* Controls: horizontal layout centered at the bottom */
+  .controls {
+    top: auto;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    flex-direction: row;
+    width: auto;
+    background-color: transparent;
+    padding: 0.3rem 0;
   }
-  .sticky-nav .nav-link i {
+  .controls a.control {
+    margin: 0 0.3rem;
+    background-color: var(--primary);
+  }
+  .controls a.control i {
     font-size: 1.3rem;
+  }
+  .theme-btn {
+    top: auto;
+    bottom: 70px;
   }
 }
