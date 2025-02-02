@@ -68,7 +68,7 @@
     loop: true,
   });
 
-  // Initialize Particles.js for dynamic background
+  // Initialize Particles.js for dynamic background (covering full website)
   particlesJS("particles-js", {
     "particles": {
       "number": {
