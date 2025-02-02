@@ -103,10 +103,11 @@ body {
 }
 /* Ensure transparent images display naturally */
 .hero-img {
-  max-width: 100%;
+  max-width: 80%;  /* or a fixed width, e.g., 350px */
   height: auto;
   border: none;
   box-shadow: none;
+  margin: 0 auto;
 }
 
 /* PARTICLES.JS CONTAINER */
@@ -371,7 +372,7 @@ footer {
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
   z-index: 100;
-  padding: 0.5rem 0;
+  padding: 0.3rem 0;
 }
 .sticky-nav .nav {
   margin: 0;
@@ -386,8 +387,8 @@ footer {
   transition: color 0.3s, transform 0.3s;
 }
 .sticky-nav .nav-link i {
-  font-size: 1.2rem;
-  margin-bottom: 0.25rem;
+  font-size: 0.9rem;
+  margin-bottom: 0.1rem;
 }
 .sticky-nav .nav-link:hover,
 .sticky-nav .nav-link.active {
@@ -407,8 +408,8 @@ footer {
   }
   /* Increase touch targets for sticky nav */
   .sticky-nav .nav-link {
-    font-size: 1rem;
-    padding: 1rem 0;
+    font-size: 0.8rem;
+    padding: 0.5rem 0;
   }
   .sticky-nav .nav-link i {
     font-size: 1.4rem;
