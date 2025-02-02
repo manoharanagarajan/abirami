@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Abirami Sivakumar - Portfolio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Portfolio of Abirami Sivakumar: Project Management, Product Management & Operations"
+    />
+    <meta
+      name="keywords"
+      content="Abirami Sivakumar, Portfolio, Project Management, Product Management, Operations"
+    />
+
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon" />
+
+    <!-- Google Web Fonts: Montserrat -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Icon Font Stylesheet -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet" />
+    <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet" />
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet" />
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet" />
+  </head>
+
+  <body data-bs-spy="scroll" data-bs-target="#mainNav" data-bs-offset="70">
+    <!-- Spinner Start -->
+    <div
+      id="spinner"
+      class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center"
+    >
+      <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
+        <span class="sr-only">Loading...</span>
+      </div>
+    </div>
+    <!-- Spinner End -->
+
+    <!-- Unique Navigation Bar Start -->
+    <nav id="mainNav" class="navbar navbar-expand-lg fixed-top custom-navbar">
+      <div class="container">
+        <a class="navbar-brand" href="#home">Abirami Sivakumar</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarContent"
+          aria-controls="navbarContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end" id="navbarContent">
+          <ul class="navbar-nav">
+            <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="#about">About Me</a></li>
+            <li class="nav-item"><a class="nav-link" href="#timeline">Journey</a></li>
+            <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+            <li class="nav-item"><a class="nav-link" href="#references">References</a></li>
+            <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- Navigation Bar End -->
+
+    <!-- Header / Home Section Start -->
+    <header id="home" class="header-section">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-lg-6 header-text">
+            <h3 class="text-primary mb-3">Hi, I'm</h3>
+            <h1 class="display-3 mb-3">Abirami Sivakumar</h1>
+            <h2 class="typed-text-output d-inline"></h2>
+            <div class="typed-text d-none">
+              Project Management, Product Management, Operations
+            </div>
+            <div class="header-buttons mt-4">
+              <a href="Abirami_Sivakumar_CV.pdf" class="btn btn-primary" target="_blank">Download CV</a>
+              <div class="social-icons">
+                <a href="https://www.linkedin.com/in/abirami-sivakumar-368955210/" class="btn btn-square" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                <a href="https://github.com/Abiraamii" class="btn btn-square" target="_blank"><i class="fab fa-github"></i></a>
+                <a href="https://devpost.com/abiramii" class="btn btn-square" target="_blank"><i class="fas fa-laptop-code"></i></a>
+              </div>
+            </div>
+            <div class="header-contact mt-3">
+              <p><i class="bi bi-geo-alt-fill text-primary me-2"></i>Dublin, Ireland</p>
+              <p><i class="bi bi-envelope-fill text-primary me-2"></i>abiramiioffl@gmail.com</p>
+              <p><i class="bi bi-telephone-fill text-primary me-2"></i>+353 (89) 201 7376</p>
+            </div>
+          </div>
+          <div class="col-lg-6 text-center">
+            <img src="img/profile.png" alt="Abirami Sivakumar" class="img-fluid header-img" />
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- Header / Home Section End -->
+
+    <!-- (Optional) Modal Video Section -->
+    <div class="modal modal-video fade" id="videoModal" tabindex="-1" aria-labelledby="videoModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content rounded-0">
+          <div class="modal-header">
+            <h3 class="modal-title" id="videoModalLabel">Introduction Video</h3>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <div class="ratio ratio-16x9">
+              <iframe class="embed-responsive-item" src="" id="video" allowfullscreen allowscriptaccess="always" allow="autoplay"></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Modal Video End -->
+
+    <!-- About Me Section Start -->
+    <section id="about" class="py-6">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-lg-6">
+            <h1 class="display-5 mb-4">About Me</h1>
+            <p>
+              I am an Engineering Management student with a strong understanding of both technical and managerial principles.
+              Over four years I have actively participated in numerous hackathons, gaining valuable experience in leadership,
+              teamwork, project management, system analysis &amp; design, and strategic planning.
+            </p>
+            <p>
+              I thrive in collaborative settings and continuously seek opportunities for professional growth.
+            </p>
+            <a href="#contact" class="btn btn-primary mt-3">Get In Touch</a>
+          </div>
+          <div class="col-lg-6">
+            <img src="img/about.jpg" alt="About Abirami" class="img-fluid rounded" />
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- About Me Section End -->
+
+    <!-- Journey Timeline Section (Education & Experience) Start -->
+    <section id="timeline" class="py-6 bg-light">
+      <div class="container">
+        <h1 class="display-5 text-center mb-5">My Journey</h1>
+        <div class="timeline">
+          <!-- Timeline Item: Education 1 -->
+          <div class="timeline-item">
+            <div class="timeline-icon"><i class="bi bi-mortarboard-fill"></i></div>
+            <div class="timeline-content">
+              <h4>MEngSc - Engineering Management</h4>
+              <span class="timeline-date">2024 – 2025</span>
+              <p>University College Dublin, Ireland</p>
+            </div>
+          </div>
+          <!-- Timeline Item: Education 2 -->
+          <div class="timeline-item">
+            <div class="timeline-icon"><i class="bi bi-mortarboard-fill"></i></div>
+            <div class="timeline-content">
+              <h4>Bachelor of Computer Science and Engineering</h4>
+              <span class="timeline-date">2020 – 2024</span>
+              <p>Sri Krishna College of Engineering and Technology, Anna University, India</p>
+            </div>
+          </div>
+          <!-- Timeline Item: Internship 1 -->
+          <div class="timeline-item">
+            <div class="timeline-icon"><i class="bi bi-laptop"></i></div>
+            <div class="timeline-content">
+              <h4>Front-End Developer – Ministry of HRD Innovation Cell</h4>
+              <span class="timeline-date">SIH 2023</span>
+              <p>Worked on the Smart India Hackathon portal.</p>
+            </div>
+          </div>
+          <!-- Timeline Item: Internship 2 -->
+          <div class="timeline-item">
+            <div class="timeline-icon"><i class="bi bi-people-fill"></i></div>
+            <div class="timeline-content">
+              <h4>Intern Team Leader &amp; Member – HCL Technologies</h4>
+              <span class="timeline-date">2023</span>
+              <p>Led a team while actively contributing as a developer.</p>
+            </div>
+          </div>
+          <!-- Timeline Item: Internship 3 -->
+          <div class="timeline-item">
+            <div class="timeline-icon"><i class="bi bi-display"></i></div>
+            <div class="timeline-content">
+              <h4>Front-End Developer &amp; Web Designer – Phoenitags</h4>
+              <span class="timeline-date">2022 – 2023</span>
+              <p>Designed and developed websites.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Journey Timeline Section End -->
+
+    <!-- Projects Section Start -->
+    <section id="projects" class="py-6">
+      <div class="container">
+        <div class="row align-items-center mb-5">
+          <div class="col-md-6">
+            <h1 class="display-5">My Projects</h1>
+          </div>
+          <div class="col-md-6 text-md-end">
+            <ul class="list-inline" id="portfolio-flters">
+              <li class="list-inline-item active" data-filter="*">All Projects</li>
+              <li class="list-inline-item" data-filter=".app">Apps / Websites</li>
+              <li class="list-inline-item" data-filter=".research">Research</li>
+            </ul>
+          </div>
+        </div>
+        <div class="row portfolio-container">
+          <!-- Project Item Example -->
+          <div class="col-lg-4 col-md-6 portfolio-item app">
+            <div class="portfolio-img">
+              <img src="img/project-1.jpg" alt="FOOD ESCAPADE" class="img-fluid" />
+              <div class="portfolio-overlay">
+                <a href="img/project-1.jpg" data-lightbox="portfolio" title="FOOD ESCAPADE"
+                  ><i class="fa fa-eye"></i
+                ></a>
+                <a href="https://devpost.com/software/food-escapade" target="_blank"
+                  ><i class="fa fa-link"></i
+                ></a>
+              </div>
+            </div>
+          </div>
+          <!-- Additional project items … -->
+        </div>
+      </div>
+    </section>
+    <!-- Projects Section End -->
+
+    <!-- References Section Start -->
+    <section id="references" class="py-6 bg-light">
+      <div class="container">
+        <h1 class="display-5 text-center mb-5">References</h1>
+        <div class="row">
+          <!-- Reference Block 1 -->
+          <div class="col-md-6">
+            <div class="reference-block">
+              <h4>Aruljothi Sivakurunathan</h4>
+              <p class="reference-title">Cloud Technical Solution Engineer, Google, Dublin</p>
+              <p><i class="bi bi-envelope-fill text-primary me-2"></i>aruljothi@gmail.com</p>
+            </div>
+          </div>
+          <!-- Reference Block 2 -->
+          <div class="col-md-6">
+            <div class="reference-block">
+              <h4>John Stephan Lenard</h4>
+              <p class="reference-title">
+                Founder - Servev &amp; Profitbells | Business Developer, TridentSQA US
+              </p>
+              <p><i class="bi bi-envelope-fill text-primary me-2"></i>johnsteve@gmail.com</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- References Section End -->
+
+    <!-- Contact Section Start -->
+    <section id="contact" class="py-6">
+      <div class="container">
+        <div class="row align-items-center mb-5">
+          <div class="col-md-6">
+            <h1 class="display-5">Let's Work Together</h1>
+          </div>
+          <div class="col-md-6 text-md-end">
+            <a href="mailto:abiramiioffl@gmail.com" class="btn btn-primary">Say Hello</a>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-5">
+            <div class="contact-info">
+              <p><strong>Office:</strong> Dublin, Ireland</p>
+              <p><strong>Phone:</strong> +353 (89) 201 7376</p>
+              <p><strong>Email:</strong> abiramiioffl@gmail.com</p>
+              <div class="social-icons mt-3">
+                <a href="https://www.linkedin.com/in/abirami-sivakumar-368955210/" target="_blank" class="btn btn-square"><i class="fab fa-linkedin-in"></i></a>
+                <a href="https://github.com/Abiraamii" target="_blank" class="btn btn-square"><i class="fab fa-github"></i></a>
+                <a href="https://devpost.com/abiramii" target="_blank" class="btn btn-square"><i class="fas fa-laptop-code"></i></a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-7">
+            <form id="contactForm">
+              <div class="row g-3">
+                <div class="col-md-6">
+                  <input type="text" class="form-control" id="name" placeholder="Your Name" required />
+                </div>
+                <div class="col-md-6">
+                  <input type="email" class="form-control" id="email" placeholder="Your Email" required />
+                </div>
+                <div class="col-12">
+                  <input type="text" class="form-control" id="subject" placeholder="Subject" required />
+                </div>
+                <div class="col-12">
+                  <textarea class="form-control" id="message" placeholder="Your Message" rows="5" required></textarea>
+                </div>
+                <div class="col-12">
+                  <button type="submit" class="btn btn-primary">Send Message</button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Contact Section End -->
+
+    <!-- Map Section Start -->
+    <section id="map">
+      <div class="container-fluid px-0">
+        <div class="map-embed">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3001156.4288297426!2d-78.01371936852176!3d42.72876761954724!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4ccc4bf0f123a5a9%3A0xddcfc6c1de189567!2sDublin%2C%20Ireland!5e0!3m2!1sen!2sbd!4v1603794290143!5m2!1sen!2sbd"
+            frameborder="0"
+            style="width: 100%; height: 450px; border:0;"
+            allowfullscreen=""
+            aria-hidden="false"
+            tabindex="0"
+          ></iframe>
+        </div>
+      </div>
+    </section>
+    <!-- Map Section End -->
+
+    <!-- Footer Start -->
+    <footer class="py-4 bg-dark text-white">
+      <div class="container text-center">
+        <p class="mb-0">&copy; 2025 Abirami Sivakumar. All Rights Reserved.</p>
+        <p class="mb-0">
+          Designed by <a href="https://htmlcodex.com" target="_blank" class="text-secondary">HTML Codex</a>
+        </p>
+      </div>
+    </footer>
+    <!-- Footer End -->
+
+    <!-- Back to Top Button -->
+    <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top">
+      <i class="bi bi-arrow-up"></i>
+    </a>
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/typed/typed.min.js"></script>
+    <script src="lib/counterup/counterup.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="lib/isotope/isotope.pkgd.min.js"></script>
+    <script src="lib/lightbox/js/lightbox.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+  </body>
+</html>
