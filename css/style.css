@@ -59,7 +59,7 @@ body {
 
 /* HERO SECTION WITH PARALLAX */
 .hero-section {
-  padding: 8rem 0 6rem;
+  padding: 6rem 0 3rem; /* Reduced vertical padding */
   background: url("../img/bg-header.png") no-repeat center top;
   background-size: cover;
   background-attachment: fixed;
@@ -101,7 +101,7 @@ body {
   margin: 0.3rem 0;
   font-size: 0.95rem;
 }
-/* Transparent images: no border/shadow */
+/* Hero image: reduced size */
 .hero-img {
   max-width: 80%;
   height: auto;
@@ -135,15 +135,16 @@ body {
   pointer-events: none;
 }
 
-/* ABOUT ME SECTION (Card Layout with Rectangular Image) */
+/* ABOUT ME SECTION */
 #about-me {
-  padding: 6rem 0;
+  padding: 4rem 0; /* Reduced vertical padding */
 }
 #about-me .card {
   border: none;
-  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 12px rgba(0,0,0,0.1);
   transition: transform 0.3s;
   border-radius: 10px;
+  padding: 1rem;
 }
 #about-me .card:hover {
   transform: translateY(-5px);
@@ -175,11 +176,11 @@ body {
 
 /* EDUCATION SECTION */
 #education {
-  padding: 6rem 0;
+  padding: 4rem 0; /* Reduced vertical padding */
   background: #ffffff;
 }
 #education h1 {
-  margin-bottom: 2rem;
+  margin-bottom: 1.5rem;
   text-align: center;
 }
 .journey-card {
@@ -188,7 +189,7 @@ body {
   transition: transform 0.3s;
   border-left: 4px solid var(--primary);
   border-radius: 5px;
-  padding: 1rem;
+  padding: 0.8rem;
 }
 .journey-card:hover {
   transform: translateY(-5px);
@@ -199,22 +200,23 @@ body {
   margin-bottom: 0.5rem;
 }
 
-/* INTERNSHIPS SECTION */
+/* INTERNSHIPS SECTION - Transparent Background */
 #internships {
-  padding: 6rem 0;
-  background: var(--light);
+  padding: 4rem 0; /* Reduced vertical padding */
+  background: transparent;
 }
 #internships h1 {
-  margin-bottom: 2rem;
+  margin-bottom: 1.5rem;
   text-align: center;
 }
 #internships .journey-card {
+  background: #fff; /* Opaque cards */
   border: none;
   box-shadow: 0 2px 12px rgba(0,0,0,0.08);
   transition: transform 0.3s;
   border-left: 4px solid var(--primary);
   border-radius: 5px;
-  padding: 1rem;
+  padding: 0.8rem;
 }
 #internships .journey-card:hover {
   transform: translateY(-5px);
@@ -222,13 +224,14 @@ body {
 
 /* ACHIEVEMENTS SECTION */
 #achievements {
-  padding: 6rem 0;
+  padding: 4rem 0; /* Reduced vertical padding */
 }
 .achievement-card {
   border: none;
   box-shadow: 0 2px 12px rgba(0,0,0,0.08);
   transition: transform 0.3s, box-shadow 0.3s;
   border-radius: 10px;
+  padding: 0.8rem;
 }
 .achievement-card:hover {
   transform: translateY(-5px);
@@ -250,7 +253,7 @@ body {
 
 /* PROJECTS SECTION */
 #projects {
-  padding: 6rem 0;
+  padding: 4rem 0; /* Reduced vertical padding */
 }
 #portfolio-flters {
   list-style: none;
@@ -261,10 +264,11 @@ body {
 #portfolio-flters li {
   display: inline-block;
   margin: 0 0.5rem;
-  padding: 0.5rem 1rem;
+  padding: 0.3rem 0.8rem;
   cursor: pointer;
   border: 2px solid transparent;
   transition: all 0.3s;
+  font-size: 0.85rem;
 }
 #portfolio-flters li.active,
 #portfolio-flters li:hover {
@@ -277,11 +281,17 @@ body {
   overflow: hidden;
   transition: transform 0.4s;
   box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+  /* Reduce card size by using a max-width (if desired) or scale down the image */
+  max-width: 350px;
+  margin: auto;
 }
 .portfolio-card img {
   width: 100%;
   display: block;
   border-radius: 10px;
+  /* Reduce image height to make the card more compact */
+  max-height: 200px;
+  object-fit: cover;
 }
 .portfolio-card:hover {
   transform: scale(1.03);
@@ -311,19 +321,20 @@ body {
 
 /* REFERENCES SECTION */
 #references {
-  padding: 6rem 0;
+  padding: 4rem 0; /* Reduced vertical padding */
 }
 .reference-block {
   border: none;
   box-shadow: 0 2px 8px rgba(0,0,0,0.08);
   transition: transform 0.3s;
   border-radius: 10px;
+  padding: 0.8rem;
 }
 .reference-block:hover {
   transform: translateY(-3px);
 }
 .reference-block .card-body {
-  padding: 1.5rem;
+  padding: 1rem;
 }
 .reference-role {
   font-style: italic;
@@ -333,7 +344,7 @@ body {
 
 /* CONTACT SECTION */
 #contact {
-  padding: 6rem 0;
+  padding: 4rem 0; /* Reduced vertical padding */
 }
 #contact .form-control {
   border-radius: 0;
@@ -355,13 +366,13 @@ body {
 
 /* FOOTER */
 footer {
-  padding: 2rem 0;
+  padding: 1.5rem 0;
   font-size: 0.9rem;
   background: var(--dark);
   text-align: center;
 }
 
-/* STICKY BOTTOM NAVIGATION BAR (ROUNDED) - Reduced items */
+/* STICKY BOTTOM NAVIGATION BAR (ROUNDED) - Only Home, About, Internships, and Contact */
 .sticky-nav {
   position: sticky;
   bottom: 0;
@@ -398,14 +409,13 @@ footer {
 /* RESPONSIVE ADJUSTMENTS */
 @media (max-width: 767.98px) {
   .hero-section {
-    padding: 6rem 0 4rem;
+    padding: 4rem 0 3rem;
     text-align: center;
   }
   .hero-img {
     display: block;
     margin: 1rem auto;
   }
-  /* Increase touch targets for sticky nav */
   .sticky-nav .nav-link {
     font-size: 0.8rem;
     padding: 1rem 0;
