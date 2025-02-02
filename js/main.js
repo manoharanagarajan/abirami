@@ -2,18 +2,15 @@
   "use strict";
 
   // Hide spinner on page load
-  var spinner = function () {
-    setTimeout(function () {
-      $("#spinner").addClass("hide");
-    }, 1);
-  };
-  spinner();
+  setTimeout(function () {
+    $("#spinner").addClass("hide");
+  }, 1);
 
-  // Initialize WOW.js for animations
+  // Initialize WOW.js for reveal animations
   new WOW().init();
 
-  // Smooth scrolling for navigation links (both top and sticky nav)
-  $(".navbar-nav a, .offcanvas a, .sticky-nav a").on("click", function (event) {
+  // Smooth scrolling for all navigation links (offcanvas and sticky)
+  $(".offcanvas a, .sticky-nav a").on("click", function (event) {
     if (this.hash !== "") {
       event.preventDefault();
       $("html, body").animate(
@@ -21,7 +18,7 @@
         1500,
         "easeInOutExpo"
       );
-      $(".navbar-nav .active, .sticky-nav .active").removeClass("active");
+      $(".sticky-nav .active").removeClass("active");
       $(this).closest("li").addClass("active");
     }
   });

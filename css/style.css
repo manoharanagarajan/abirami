@@ -1,4 +1,4 @@
-/* Base Settings & Variables */
+/* BASE SETTINGS & VARIABLES */
 :root {
   --primary: #6244C5;
   --secondary: #FFC448;
@@ -19,7 +19,7 @@ body {
   line-height: 1.6;
 }
 
-/* Utility Classes */
+/* UTILITY CLASSES */
 .text-primary { color: var(--primary) !important; }
 .bg-primary { background-color: var(--primary) !important; }
 .btn-primary {
@@ -32,7 +32,7 @@ body {
   border-color: var(--dark);
 }
 
-/* Spinner */
+/* SPINNER */
 #spinner {
   position: fixed;
   top: 50%;
@@ -48,7 +48,7 @@ body {
   visibility: hidden;
 }
 
-/* Back to Top */
+/* BACK TO TOP BUTTON */
 .back-to-top {
   position: fixed;
   right: 20px;
@@ -57,45 +57,17 @@ body {
   z-index: 99;
 }
 
-/* Custom Navbar (Top - hidden on mobile) */
-.custom-nav {
-  background: rgba(255, 255, 255, 0.98);
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
-  padding: 0.75rem 0;
-  transition: background 0.3s, padding 0.3s;
-}
-.custom-nav .navbar-brand {
-  font-weight: 600;
-  font-size: 1.5rem;
-  letter-spacing: 1px;
-}
-.custom-nav .navbar-nav .nav-link {
-  margin: 0 0.75rem;
-  font-weight: 500;
-  text-transform: uppercase;
-  position: relative;
-  transition: color 0.3s;
-}
-.custom-nav .navbar-nav .nav-link::after {
-  content: "";
-  position: absolute;
-  width: 0;
-  height: 2px;
-  background: var(--primary);
-  left: 0;
-  bottom: -5px;
-  transition: width 0.3s;
-}
-.custom-nav .navbar-nav .nav-link:hover::after,
-.custom-nav .navbar-nav .nav-link.active::after {
-  width: 100%;
-}
-
-/* Hero Section */
+/* HERO SECTION WITH PARALLAX */
 .hero-section {
   padding: 8rem 0 6rem;
   background: url("../img/bg-header.png") no-repeat center top;
   background-size: cover;
+  background-attachment: fixed;
+  animation: fadeIn 1s ease-out;
+}
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 .hero-section h3 { font-size: 1.5rem; }
 .hero-section .display-4 {
@@ -119,78 +91,110 @@ body {
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  transition: transform 0.3s;
+}
+.social-icons .btn:hover {
+  transform: scale(1.1);
 }
 .hero-section .contact-details p {
   margin: 0.3rem 0;
   font-size: 0.95rem;
 }
+/* Ensure transparent images display naturally */
 .hero-img {
   max-width: 100%;
   height: auto;
+  border: none;
+  box-shadow: none;
 }
 
-/* About Section */
-#about {
+/* ABOUT ME SECTION (Card Layout with Skill Badges) */
+#about-me {
   padding: 6rem 0;
 }
-#about h1 {
-  font-size: 2rem;
+#about-me .card {
+  border: none;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.1);
+  transition: transform 0.3s;
+  border-radius: 10px;
+}
+#about-me .card:hover {
+  transform: translateY(-5px);
+}
+#about-me img {
+  width: 100%;
+  max-width: 250px;
+  border-radius: 50%;
+  display: block;
+  margin: 0 auto;
+}
+#about-me .card-title {
+  font-size: 1.75rem;
   font-weight: 600;
-  margin-bottom: 1.5rem;
+}
+#about-me .card-text {
+  font-size: 1rem;
+  color: var(--dark);
+}
+.skill-badge {
+  display: inline-block;
+  background: var(--primary);
+  color: #fff;
+  padding: 0.4rem 0.8rem;
+  border-radius: 20px;
+  margin: 0.25rem;
+  font-size: 0.85rem;
 }
 
-/* My Journey (Timeline) Section */
-#journey {
+/* EDUCATION SECTION */
+#education {
+  padding: 6rem 0;
+  background: #ffffff;
+}
+#education h1 {
+  margin-bottom: 2rem;
+}
+.journey-card {
+  border: none;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+  transition: transform 0.3s;
+  border-radius: 10px;
+}
+.journey-card:hover {
+  transform: translateY(-5px);
+}
+
+/* INTERNSHIPS SECTION */
+#internships {
   padding: 6rem 0;
   background: var(--light);
 }
-.timeline-wrapper {
-  max-width: 800px;
-  margin: 0 auto;
-  border-left: 2px solid var(--primary);
-  padding-left: 2rem;
-}
-.timeline-item {
+#internships h1 {
   margin-bottom: 2rem;
-  position: relative;
-  padding-left: 1.5rem;
 }
-.timeline-item::before {
-  content: "";
-  position: absolute;
-  left: -9px;
-  top: 0.25rem;
-  width: 14px;
-  height: 14px;
-  background: var(--primary);
-  border-radius: 50%;
+#internships .journey-card {
+  border: none;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+  transition: transform 0.3s;
+  border-radius: 10px;
 }
-.timeline-title {
-  margin: 0;
-  font-weight: 600;
-}
-.timeline-date {
-  font-size: 0.85rem;
-  color: var(--primary);
-  font-weight: 500;
-  margin-bottom: 0.5rem;
+#internships .journey-card:hover {
+  transform: translateY(-5px);
 }
 
-/* Achievements Section */
+/* ACHIEVEMENTS SECTION (Cards) */
 #achievements {
   padding: 6rem 0;
 }
 .achievement-card {
-  background: #fff;
-  padding: 1.5rem;
-  text-align: center;
-  border-radius: 8px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
-  margin-bottom: 2rem;
-  transition: transform 0.3s;
+  border: none;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+  transition: transform 0.3s, box-shadow 0.3s;
+  border-radius: 10px;
 }
 .achievement-card:hover {
   transform: translateY(-5px);
+  box-shadow: 0 4px 16px rgba(0,0,0,0.1);
 }
 .achievement-icon {
   font-size: 2rem;
@@ -206,7 +210,7 @@ body {
   color: var(--dark);
 }
 
-/* Projects Section */
+/* PROJECTS SECTION (Cards) */
 #projects {
   padding: 6rem 0;
 }
@@ -230,16 +234,19 @@ body {
   border-color: var(--primary);
 }
 .portfolio-card {
-  position: relative;
+  border: none;
+  border-radius: 10px;
   overflow: hidden;
-  margin-bottom: 2rem;
+  transition: transform 0.4s;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.08);
 }
 .portfolio-card img {
   width: 100%;
-  transition: transform 0.4s;
+  display: block;
+  border-radius: 10px;
 }
-.portfolio-card:hover img {
-  transform: scale(1.05);
+.portfolio-card:hover {
+  transform: scale(1.03);
 }
 .portfolio-overlay {
   position: absolute;
@@ -250,6 +257,7 @@ body {
   background: rgba(98, 68, 197, 0.9);
   opacity: 0;
   transition: opacity 0.3s;
+  border-radius: 10px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -263,20 +271,21 @@ body {
   font-size: 1.25rem;
 }
 
-/* References Section */
+/* REFERENCES SECTION (Cards) */
 #references {
   padding: 6rem 0;
 }
 .reference-block {
-  background: #fff;
-  padding: 1.5rem;
-  border-left: 4px solid var(--primary);
-  margin-bottom: 1.5rem;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  border: none;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  transition: transform 0.3s;
+  border-radius: 10px;
 }
-.reference-block h4 {
-  margin-top: 0;
-  font-weight: 600;
+.reference-block:hover {
+  transform: translateY(-3px);
+}
+.reference-block .card-body {
+  padding: 1.5rem;
 }
 .reference-role {
   font-style: italic;
@@ -284,40 +293,46 @@ body {
   margin-bottom: 0.5rem;
 }
 
-/* Contact Section */
+/* CONTACT SECTION */
 #contact {
   padding: 6rem 0;
 }
 #contact .form-control {
   border-radius: 0;
   border: 1px solid var(--primary);
+  transition: border-color 0.3s;
+}
+#contact .form-control:focus {
+  border-color: var(--primary);
+  box-shadow: none;
 }
 #contact .btn {
   border-radius: 0;
 }
 
-/* Map Section */
+/* MAP SECTION */
 .map-embed iframe {
   border: 0;
 }
 
-/* Footer */
+/* FOOTER */
 footer {
   padding: 2rem 0;
   font-size: 0.9rem;
   background: var(--dark);
 }
 
-/* Sticky Bottom Navigation Bar with Rounded Top */
+/* STICKY BOTTOM NAVIGATION BAR (ROUNDED) */
 .sticky-nav {
   position: sticky;
   bottom: 0;
   width: 100%;
-  background: #ffffff;
-  box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.1);
+  background: linear-gradient(135deg, #ffffff, #f9f9f9);
+  box-shadow: 0 -2px 8px rgba(0,0,0,0.1);
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
   z-index: 100;
+  padding: 0.5rem 0;
 }
 .sticky-nav .nav {
   margin: 0;
@@ -329,7 +344,7 @@ footer {
   display: flex;
   flex-direction: column;
   align-items: center;
-  transition: color 0.3s;
+  transition: color 0.3s, transform 0.3s;
 }
 .sticky-nav .nav-link i {
   font-size: 1.2rem;
@@ -338,9 +353,10 @@ footer {
 .sticky-nav .nav-link:hover,
 .sticky-nav .nav-link.active {
   color: var(--primary);
+  transform: translateY(-3px);
 }
 
-/* Responsive Adjustments */
+/* RESPONSIVE ADJUSTMENTS */
 @media (max-width: 767.98px) {
   .hero-section {
     padding: 6rem 0 4rem;
@@ -350,19 +366,18 @@ footer {
     display: block;
     margin: 1rem auto;
   }
-  .custom-nav .navbar-nav {
-    text-align: center;
-  }
-  .timeline-wrapper {
-    border-left: 2px solid var(--primary);
+  .timeline {
     padding-left: 1rem;
   }
-  .timeline-item {
-    padding-left: 1.5rem;
+  .timeline::before {
+    left: 10px;
   }
-  .timeline-item::before {
-    left: -9px;
-    width: 14px;
-    height: 14px;
+  .timeline-item {
+    padding-left: 40px;
+  }
+  .timeline-item .timeline-marker {
+    left: 2px;
+    width: 12px;
+    height: 12px;
   }
 }
