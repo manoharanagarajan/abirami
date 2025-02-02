@@ -9,6 +9,20 @@
   // Initialize WOW.js for reveal animations
   new WOW().init();
 
+  // Smooth scrolling for navigation links (offcanvas and sticky)
+  $(".offcanvas a, .sticky-nav a").on("click", function (event) {
+    if (this.hash !== "") {
+      event.preventDefault();
+      $("html, body").animate(
+        { scrollTop: $(this.hash).offset().top - 80 },
+        1500,
+        "easeInOutExpo"
+      );
+      $(".sticky-nav .active").removeClass("active");
+      $(this).closest("li").addClass("active");
+    }
+  });
+
   // Back-to-top button functionality
   $(window).scroll(function () {
     if ($(this).scrollTop() > 300) {
@@ -34,17 +48,15 @@
     });
   }
 
-  // Initialize Isotope for portfolio filtering after images have loaded
-  var $portfolioContainer = $(".portfolio-container").imagesLoaded(function () {
-    $portfolioContainer.isotope({
-      itemSelector: ".portfolio-item",
-      layoutMode: "fitRows",
-    });
+  // Initialize Isotope for portfolio filtering
+  var portfolioIsotope = $(".portfolio-container").isotope({
+    itemSelector: ".portfolio-item",
+    layoutMode: "fitRows",
   });
   $("#portfolio-flters li").on("click", function () {
     $("#portfolio-flters li").removeClass("active");
     $(this).addClass("active");
-    $(".portfolio-container").isotope({ filter: $(this).data("filter") });
+    portfolioIsotope.isotope({ filter: $(this).data("filter") });
   });
 
   // (Optional) Owl Carousel for testimonials/achievements if needed
@@ -56,7 +68,7 @@
     loop: true,
   });
 
-  // Initialize Particles.js for dynamic background (full website)
+  // Initialize Particles.js for dynamic background (covering full website)
   particlesJS("particles-js", {
     "particles": {
       "number": {
@@ -133,23 +145,5 @@
       }
     },
     "retina_detect": true
-  });
-
-  // Navigation Controls using anchor tags (click handled by browser plus smooth scroll)
-  $(".controls a.control").on("click", function (e) {
-    e.preventDefault();
-    // Remove active class from all controls and add to the clicked one
-    $(".controls a.control").removeClass("active-btn");
-    $(this).addClass("active-btn");
-    // Get the target section from the href
-    var target = $(this).attr("href");
-    if (target) {
-      $("html, body").animate({ scrollTop: $(target).offset().top - 80 }, 800);
-    }
-  });
-
-  // Toggle Light/Dark Theme
-  $(".theme-btn").on("click", function () {
-    $("body").toggleClass("light-mode");
   });
 })(jQuery);

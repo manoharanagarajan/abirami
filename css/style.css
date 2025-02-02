@@ -369,10 +369,10 @@ footer {
   text-align: center;
 }
 
-/* NEW NAVIGATION CONTROLS - Using Anchor Tags */
+/* NEW NAVIGATION CONTROLS */
 .controls {
   position: fixed;
-  z-index: 1000;
+  z-index: 10;
   top: 50%;
   right: 3%;
   display: flex;
@@ -380,10 +380,11 @@ footer {
   align-items: center;
   transform: translateY(-50%);
 }
-.controls a.control {
+.controls .control {
   padding: 1rem;
-  text-decoration: none;
-  background-color: var(--primary); /* solid color for opaque buttons */
+  cursor: pointer;
+  /* Remove background on mobile if needed */
+  background-color: rgba(0,0,0,0.3);
   width: 55px;
   height: 55px;
   border-radius: 50%;
@@ -394,11 +395,12 @@ footer {
   box-shadow: 0 3px 15px rgba(0, 0, 0, 0.3);
   transition: all 0.4s ease-in-out;
 }
-.controls a.control i {
+.controls .control i {
   font-size: 1.2rem;
   color: #fff;
+  pointer-events: none;
 }
-.controls a.active-btn {
+.controls .active-btn {
   background-color: var(--secondary);
 }
 .theme-btn {
@@ -408,7 +410,7 @@ footer {
   width: 70px;
   height: 70px;
   border-radius: 50%;
-  background-color: var(--primary);
+  background-color: rgba(0,0,0,0.3);
   cursor: pointer;
   display: flex;
   justify-content: center;
@@ -435,22 +437,22 @@ footer {
     display: block;
     margin: 1rem auto;
   }
-  /* Controls: horizontal layout centered at the bottom */
+  /* Controls: switch to horizontal layout, remove background if desired */
   .controls {
     top: auto;
     bottom: 0;
     left: 50%;
     transform: translateX(-50%);
     flex-direction: row;
-    width: auto;
+    width: 100%;
     background-color: transparent;
     padding: 0.3rem 0;
   }
-  .controls a.control {
+  .controls .control {
     margin: 0 0.3rem;
-    background-color: var(--primary);
+    background-color: transparent;
   }
-  .controls a.control i {
+  .controls .control i {
     font-size: 1.3rem;
   }
   .theme-btn {
