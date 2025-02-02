@@ -4,8 +4,14 @@
     <meta charset="utf-8" />
     <title>Abirami Sivakumar - Portfolio</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="description" content="Portfolio of Abirami Sivakumar: Project Management, Product Management & Operations" />
-    <meta name="keywords" content="Abirami Sivakumar, Portfolio, Education, Internships, Project Management, Product Management, Operations" />
+    <meta
+      name="description"
+      content="Portfolio of Abirami Sivakumar: Project Management, Product Management &amp; Operations"
+    />
+    <meta
+      name="keywords"
+      content="Abirami Sivakumar, Portfolio, Education, Internships, Project Management, Product Management, Operations"
+    />
 
     <!-- Favicon -->
     <link rel="icon" href="img/favicon.ico" />
@@ -13,11 +19,20 @@
     <!-- Google Web Fonts: Poppins -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
 
     <!-- Icon Font Stylesheets -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet" />
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet" />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
 
     <!-- Bootstrap CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet" />
@@ -38,9 +53,11 @@
       </div>
     </div>
 
-    <!-- HERO SECTION WITH PARALLAX -->
+    <!-- HERO SECTION WITH PARALLAX & PARTICLE BACKGROUND -->
     <section id="home" class="hero-section wow fadeInDown">
-      <div class="container">
+      <div class="container position-relative">
+        <!-- Particles.js container -->
+        <div id="particles-js"></div>
         <div class="row align-items-center">
           <!-- Text Column -->
           <div class="col-lg-6 text-center text-lg-start">
@@ -65,14 +82,22 @@
               </a>
             </div>
             <div class="mt-3 contact-details">
-              <p><i class="bi bi-geo-alt-fill text-primary me-2"></i>Dublin, Ireland</p>
-              <p><i class="bi bi-envelope-fill text-primary me-2"></i>abiramiioffl@gmail.com</p>
-              <p><i class="bi bi-telephone-fill text-primary me-2"></i>+353 (89) 201 7376</p>
+              <p>
+                <i class="bi bi-geo-alt-fill text-primary me-2"></i>Dublin, Ireland
+              </p>
+              <p>
+                <i class="bi bi-envelope-fill text-primary me-2"></i>abiramiioffl@gmail.com
+              </p>
+              <p>
+                <i class="bi bi-telephone-fill text-primary me-2"></i>+353 (89) 201 7376
+              </p>
             </div>
           </div>
-          <!-- Image Column: Transparent PNG with no frame -->
-          <div class="col-lg-6 text-center">
-            <img src="img/profile.png" alt="Abirami Sivakumar" class="img-fluid hero-img wow zoomIn" data-wow-delay="0.3s" />
+          <!-- Image Column with Hero Image Container -->
+          <div class="col-lg-6 text-center position-relative">
+            <div class="hero-img-container">
+              <img src="img/profile.png" alt="Abirami Sivakumar" class="img-fluid hero-img wow zoomIn" data-wow-delay="0.3s" />
+            </div>
           </div>
         </div>
       </div>
@@ -103,9 +128,9 @@
                 <span class="badge bg-primary skill-badge">Web Development</span>
               </div>
             </div>
-            <!-- Additional Image: Rectangular with slight rounded corners -->
+            <!-- Additional Rectangular Image with Slightly Rounded Corners -->
             <div class="col-md-5 text-center">
-              <img src="img/WhatsApp Image 2025-02-02 at 21.43.02.jpeg" alt="Abirami Sivakumar" class="img-fluid additional-about-img rounded" style="max-width: 400px;" />
+              <img src="img/WhatsApp Image 2025-02-02 at 21.43.02.jpeg" alt="Abirami Sivakumar" class="img-fluid additional-about-img rounded" style="max-width: 300px;" />
             </div>
           </div>
         </div>
@@ -274,7 +299,7 @@
               </div>
             </div>
           </div>
-          <!-- Add additional project cards as needed -->
+          <!-- Additional project cards as needed -->
         </div>
       </div>
     </section>
@@ -395,7 +420,12 @@
               <span>About</span>
             </a>
           </li>
-          
+          <li class="nav-item">
+            <a class="nav-link" href="#education">
+              <i class="bi bi-mortarboard-fill"></i>
+              <span>Education</span>
+            </a>
+          </li>
           <li class="nav-item">
             <a class="nav-link" href="#internships">
               <i class="bi bi-briefcase-fill"></i>
@@ -405,10 +435,15 @@
           <li class="nav-item">
             <a class="nav-link" href="#achievements">
               <i class="bi bi-trophy-fill"></i>
-              <span>Achievements</span>
+              <span>Achieve</span>
             </a>
           </li>
-       
+          <li class="nav-item">
+            <a class="nav-link" href="#projects">
+              <i class="bi bi-briefcase-fill"></i>
+              <span>Projects</span>
+            </a>
+          </li>
           <li class="nav-item">
             <a class="nav-link" href="#contact">
               <i class="bi bi-envelope-fill"></i>
@@ -442,7 +477,8 @@
     <script src="lib/owlcarousel/owl.carousel.min.js"></script>
     <script src="lib/isotope/isotope.pkgd.min.js"></script>
     <script src="lib/lightbox/js/lightbox.min.js"></script>
-
+    <!-- PARTICLES.JS LIBRARY -->
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
     <!-- CUSTOM JAVASCRIPT -->
     <script src="js/main.js"></script>
   </body>
