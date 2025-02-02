@@ -100,7 +100,7 @@ body {
   margin: 0.3rem 0;
   font-size: 0.95rem;
 }
-/* Ensure transparent images display naturally */
+/* Transparent images: no border/shadow */
 .hero-img {
   max-width: 100%;
   height: auto;
@@ -108,7 +108,7 @@ body {
   box-shadow: none;
 }
 
-/* ABOUT ME SECTION (Card Layout with Skill Badges) */
+/* ABOUT ME SECTION (Card Layout with Rectangular Image) */
 #about-me {
   padding: 6rem 0;
 }
@@ -123,8 +123,8 @@ body {
 }
 #about-me img {
   width: 100%;
-  max-width: 250px;
-  border-radius: 50%;
+  max-width: 300px;
+  border-radius: 5px;
   display: block;
   margin: 0 auto;
 }
@@ -153,15 +153,23 @@ body {
 }
 #education h1 {
   margin-bottom: 2rem;
+  text-align: center;
 }
 .journey-card {
   border: none;
   box-shadow: 0 2px 12px rgba(0,0,0,0.08);
   transition: transform 0.3s;
-  border-radius: 10px;
+  border-left: 4px solid var(--primary);
+  border-radius: 5px;
+  padding: 1rem;
 }
 .journey-card:hover {
   transform: translateY(-5px);
+}
+.journey-card .card-icon {
+  font-size: 1.8rem;
+  color: var(--primary);
+  margin-bottom: 0.5rem;
 }
 
 /* INTERNSHIPS SECTION */
@@ -171,12 +179,15 @@ body {
 }
 #internships h1 {
   margin-bottom: 2rem;
+  text-align: center;
 }
 #internships .journey-card {
   border: none;
   box-shadow: 0 2px 12px rgba(0,0,0,0.08);
   transition: transform 0.3s;
-  border-radius: 10px;
+  border-left: 4px solid var(--primary);
+  border-radius: 5px;
+  padding: 1rem;
 }
 #internships .journey-card:hover {
   transform: translateY(-5px);
@@ -320,6 +331,7 @@ footer {
   padding: 2rem 0;
   font-size: 0.9rem;
   background: var(--dark);
+  text-align: center;
 }
 
 /* STICKY BOTTOM NAVIGATION BAR (ROUNDED) */
@@ -366,18 +378,12 @@ footer {
     display: block;
     margin: 1rem auto;
   }
-  .timeline {
-    padding-left: 1rem;
+  /* Increase touch target sizes for sticky nav on mobile */
+  .sticky-nav .nav-link {
+    font-size: 1rem;
+    padding: 1rem 0;
   }
-  .timeline::before {
-    left: 10px;
-  }
-  .timeline-item {
-    padding-left: 40px;
-  }
-  .timeline-item .timeline-marker {
-    left: 2px;
-    width: 12px;
-    height: 12px;
+  .sticky-nav .nav-link i {
+    font-size: 1.4rem;
   }
 }

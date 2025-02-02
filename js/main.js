@@ -9,7 +9,7 @@
   // Initialize WOW.js for reveal animations
   new WOW().init();
 
-  // Smooth scrolling for all navigation links (offcanvas and sticky)
+  // Smooth scrolling for navigation links (offcanvas and sticky)
   $(".offcanvas a, .sticky-nav a").on("click", function (event) {
     if (this.hash !== "") {
       event.preventDefault();
