@@ -1,9 +1,17 @@
 /* BASE SETTINGS & VARIABLES */
 :root {
-  --primary: #6244C5;
-  --secondary: #FFC448;
-  --light: #FAFAFB;
-  --dark: #12141D;
+  --primary: #6244C5;        /* Deep purple for light mode accents */
+  --secondary: #FFC448;      /* Yellow for active state in light mode */
+  --light: #FAFAFB;          /* Light background */
+  --dark: #12141D;           /* Dark text */
+}
+
+/* Dark mode variables override when body has dark-mode class */
+body.dark-mode {
+  --primary: #FFC448;        /* Swap primary and secondary for dark mode */
+  --secondary: #6244C5;
+  --light: #121212;          /* Dark background */
+  --dark: #ffffff;           /* Light text */
 }
 
 *,
@@ -369,10 +377,10 @@ footer {
   text-align: center;
 }
 
-/* NEW NAVIGATION CONTROLS */
+/* NEW NAVIGATION CONTROLS - Using Anchor Tags */
 .controls {
   position: fixed;
-  z-index: 10;
+  z-index: 1000;
   top: 50%;
   right: 3%;
   display: flex;
@@ -380,11 +388,10 @@ footer {
   align-items: center;
   transform: translateY(-50%);
 }
-.controls .control {
+.controls a.control {
   padding: 1rem;
-  cursor: pointer;
-  /* Remove background on mobile if needed */
-  background-color: rgba(0,0,0,0.3);
+  text-decoration: none;
+  background-color: var(--primary);
   width: 55px;
   height: 55px;
   border-radius: 50%;
@@ -395,36 +402,12 @@ footer {
   box-shadow: 0 3px 15px rgba(0, 0, 0, 0.3);
   transition: all 0.4s ease-in-out;
 }
-.controls .control i {
+.controls a.control i {
   font-size: 1.2rem;
   color: #fff;
-  pointer-events: none;
 }
-.controls .active-btn {
+.controls a.active-btn {
   background-color: var(--secondary);
-}
-.theme-btn {
-  position: fixed;
-  top: 5%;
-  right: 3%;
-  width: 70px;
-  height: 70px;
-  border-radius: 50%;
-  background-color: rgba(0,0,0,0.3);
-  cursor: pointer;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  box-shadow: 0 3px 15px rgba(0, 0, 0, 0.3);
-  transition: all 0.1s ease-in-out;
-}
-.theme-btn:active {
-  transform: translateY(-3px);
-}
-.theme-btn i {
-  font-size: 1.4rem;
-  color: #fff;
-  pointer-events: none;
 }
 
 /* RESPONSIVE ADJUSTMENTS */
@@ -437,26 +420,25 @@ footer {
     display: block;
     margin: 1rem auto;
   }
-  /* Controls: switch to horizontal layout, remove background if desired */
+  /* Controls: horizontal layout centered at the bottom */
   .controls {
     top: auto;
     bottom: 0;
     left: 50%;
     transform: translateX(-50%);
     flex-direction: row;
-    width: 100%;
+    width: auto;
     background-color: transparent;
     padding: 0.3rem 0;
   }
-  .controls .control {
-    margin: 0 0.3rem;
-    background-color: transparent;
+  .controls a.control {
+    margin: 0 0.5rem;
+    background-color: var(--primary);
   }
-  .controls .control i {
+  .controls a.control i {
     font-size: 1.3rem;
   }
-  .theme-btn {
-    top: auto;
-    bottom: 70px;
+  .controls a.control.active-btn {
+    background-color: var(--secondary) !important;
   }
 }
