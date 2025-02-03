@@ -57,12 +57,9 @@ body {
 }
 
 /* BACK TO TOP BUTTON */
+/* Remove Back-to-Top button entirely */
 .back-to-top {
-  position: fixed;
-  right: 20px;
-  bottom: 20px;
-  display: none;
-  z-index: 99;
+  display: none !important;
 }
 
 /* HERO SECTION */
@@ -467,9 +464,5 @@ footer {
   }
   .controls a.active-btn {
     background-color: var(--secondary) !important;
-  }
-  /* Hide Back-to-Top Button on Mobile */
-  .back-to-top {
-    display: none !important;
   }
 }
