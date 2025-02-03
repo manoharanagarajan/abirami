@@ -157,4 +157,10 @@
     $slides.eq(nextIndex).addClass('active');
   }, 5000); // Change image every 5 seconds
 
+  // NEW: Update active navigation control on click
+  $('.controls a.control').on('click', function () {
+    $('.controls a.control').removeClass('active-btn');
+    $(this).addClass('active-btn');
+  });
+  
 })(jQuery);
