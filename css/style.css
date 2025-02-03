@@ -450,10 +450,11 @@ footer {
   .controls {
     top: auto;
     bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
+    left: 0;
+    right: 0;
+    margin: auto;
     flex-direction: row;
-    width: auto;
+    justify-content: center;
     background-color: transparent;
     padding: 0.3rem 0;
   }
@@ -464,7 +465,7 @@ footer {
   .controls a.control i {
     font-size: 1.3rem;
   }
-  .controls a.control.active-btn {
+  .controls a.active-btn {
     background-color: var(--secondary) !important;
   }
 }
