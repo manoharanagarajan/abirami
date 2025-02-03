@@ -9,8 +9,8 @@
   // Initialize WOW.js for reveal animations
   new WOW().init();
 
-  // Smooth scrolling for navigation links (offcanvas and sticky)
-  $(".offcanvas a, .sticky-nav a").on("click", function (event) {
+  // Smooth scrolling for navigation links
+  $(".controls a.control, .offcanvas a, .sticky-nav a").on("click", function (event) {
     if (this.hash !== "") {
       event.preventDefault();
       $("html, body").animate(
@@ -18,8 +18,8 @@
         1500,
         "easeInOutExpo"
       );
-      $(".sticky-nav .active").removeClass("active");
-      $(this).closest("li").addClass("active");
+      $(".controls a.control").removeClass("active-btn");
+      $(this).addClass("active-btn");
     }
   });
 
@@ -48,7 +48,7 @@
     });
   }
 
-  // Initialize Isotope for portfolio filtering
+  // Initialize Isotope for portfolio filtering if needed
   var portfolioIsotope = $(".portfolio-container").isotope({
     itemSelector: ".portfolio-item",
     layoutMode: "fitRows",
@@ -59,7 +59,7 @@
     portfolioIsotope.isotope({ filter: $(this).data("filter") });
   });
 
-  // (Optional) Owl Carousel for testimonials/achievements if needed
+  // (Optional) Owl Carousel initialization for testimonials or other sections
   $(".testimonial-carousel").owlCarousel({
     autoplay: true,
     smartSpeed: 1000,
@@ -68,7 +68,7 @@
     loop: true,
   });
 
-  // Initialize Particles.js for dynamic background (covering full website)
+  // Initialize Particles.js for dynamic background
   particlesJS("particles-js", {
     "particles": {
       "number": {
@@ -147,7 +147,7 @@
     "retina_detect": true
   });
 
-  // NEW: Automatic hero image slideshow with blur transition
+  // Automatic hero image slideshow with blur transition
   setInterval(function(){
     var $slides = $('.hero-img-container .slide');
     var $active = $slides.filter('.active');
@@ -157,10 +157,4 @@
     $slides.eq(nextIndex).addClass('active');
   }, 5000); // Change image every 5 seconds
 
-  // NEW: Update active navigation control on click
-  $('.controls a.control').on('click', function () {
-    $('.controls a.control').removeClass('active-btn');
-    $(this).addClass('active-btn');
-  });
-  
 })(jQuery);

@@ -8,10 +8,10 @@
 
 /* Dark mode variables override when body has dark-mode class */
 body.dark-mode {
-  --primary: #FFC448;        /* Swap primary and secondary for dark mode */
+  --primary: #FFC448;
   --secondary: #6244C5;
-  --light: #121212;          /* Dark background */
-  --dark: #ffffff;           /* Light text */
+  --light: #121212;
+  --dark: #ffffff;
 }
 
 *,
@@ -57,7 +57,6 @@ body {
 }
 
 /* BACK TO TOP BUTTON */
-/* Remove Back-to-Top button entirely */
 .back-to-top {
   display: none !important;
 }
@@ -113,7 +112,7 @@ body {
   box-shadow: none;
 }
 
-/* PARTICLES.JS CONTAINER - Fullscreen Background */
+/* PARTICLES.JS CONTAINER */
 #particles-js {
   position: fixed;
   top: 0;
@@ -123,11 +122,11 @@ body {
   z-index: -9999;
 }
 
-/* HERO IMAGE CONTAINER WITH GRADIENT OVERLAY */
+/* HERO IMAGE CONTAINER */
 .hero-img-container {
   position: relative;
   width: 100%;
-  height: 500px; /* Adjust height as needed */
+  height: 500px;
   overflow: hidden;
 }
 .hero-img-container .slide {
@@ -141,7 +140,6 @@ body {
   opacity: 0;
   filter: blur(5px);
 }
-/* Ensure non-active slides remain hidden (prevents overlapping on load) */
 .hero-img-container .slide:not(.active) {
   opacity: 0 !important;
 }
@@ -160,7 +158,7 @@ body {
   pointer-events: none;
 }
 
-/* ABOUT ME SECTION */
+/* UPDATED ABOUT ME SECTION */
 #about-me {
   padding: 4rem 0;
 }
@@ -169,34 +167,54 @@ body {
   box-shadow: 0 2px 12px rgba(0,0,0,0.1);
   transition: transform 0.3s;
   border-radius: 10px;
-  padding: 1rem;
+  padding: 2rem;
 }
 #about-me .card:hover {
   transform: translateY(-5px);
 }
-#about-me img {
-  width: 100%;
-  max-width: 300px;
+#about-me blockquote {
+  font-style: italic;
+  color: var(--primary);
+  border-left: 4px solid var(--primary);
+  padding-left: 1rem;
+  margin: 1rem 0;
+}
+
+/* Expertise Cards in About Me */
+.expertise-card {
+  background: var(--light);
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  text-align: center;
+  transition: transform 0.3s;
+}
+.expertise-card:hover {
+  transform: translateY(-3px);
+}
+.expertise-icon {
+  font-size: 2rem;
+  color: var(--primary);
+  margin-bottom: 0.5rem;
+}
+
+/* LEADERSHIP & COMMUNITY SECTION */
+#leadership {
+  padding: 4rem 0;
+}
+#leadership h1 {
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+#leadership .journey-card {
+  border: none;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+  transition: transform 0.3s;
+  border-left: 4px solid var(--primary);
   border-radius: 5px;
-  display: block;
-  margin: 0 auto;
+  padding: 0.8rem;
 }
-#about-me .card-title {
-  font-size: 1.75rem;
-  font-weight: 600;
-}
-#about-me .card-text {
-  font-size: 1rem;
-  color: var(--dark);
-}
-.skill-badge {
-  display: inline-block;
-  background: var(--primary);
-  color: #fff;
-  padding: 0.4rem 0.8rem;
-  border-radius: 20px;
-  margin: 0.25rem;
-  font-size: 0.85rem;
+#leadership .journey-card:hover {
+  transform: translateY(-5px);
 }
 
 /* EDUCATION SECTION */
@@ -208,24 +226,13 @@ body {
   margin-bottom: 1.5rem;
   text-align: center;
 }
-.journey-card {
-  border: none;
-  box-shadow: 0 2px 12px rgba(0,0,0,0.08);
-  transition: transform 0.3s;
-  border-left: 4px solid var(--primary);
-  border-radius: 5px;
-  padding: 0.8rem;
-}
-.journey-card:hover {
-  transform: translateY(-5px);
-}
 .journey-card .card-icon {
   font-size: 1.8rem;
   color: var(--primary);
   margin-bottom: 0.5rem;
 }
 
-/* INTERNSHIPS SECTION - Transparent Background */
+/* INTERNSHIPS SECTION */
 #internships {
   padding: 4rem 0;
   background: transparent;
@@ -234,22 +241,36 @@ body {
   margin-bottom: 1.5rem;
   text-align: center;
 }
-#internships .journey-card {
-  background: #fff;
-  border: none;
-  box-shadow: 0 2px 12px rgba(0,0,0,0.08);
-  transition: transform 0.3s;
-  border-left: 4px solid var(--primary);
-  border-radius: 5px;
-  padding: 0.8rem;
+
+/* PROJECTS & INNOVATIONS SECTION */
+#projects {
+  padding: 4rem 0;
 }
-#internships .journey-card:hover {
-  transform: translateY(-5px);
+#projects h1 {
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+.portfolio-card {
+  border: none;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: transform 0.4s;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+  max-width: 350px;
+  margin: auto;
+  position: relative;
+}
+.portfolio-card:hover {
+  transform: scale(1.03);
 }
 
-/* ACHIEVEMENTS SECTION */
-#achievements {
+/* HACKATHON WINS & ACHIEVEMENTS SECTION */
+#hackathons {
   padding: 4rem 0;
+}
+#hackathons h1 {
+  margin-bottom: 1.5rem;
+  text-align: center;
 }
 .achievement-card {
   border: none;
@@ -276,72 +297,6 @@ body {
   color: var(--dark);
 }
 
-/* PROJECTS SECTION */
-#projects {
-  padding: 4rem 0;
-}
-#portfolio-flters {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  text-align: center;
-}
-#portfolio-flters li {
-  display: inline-block;
-  margin: 0 0.5rem;
-  padding: 0.3rem 0.8rem;
-  cursor: pointer;
-  border: 2px solid transparent;
-  transition: all 0.3s;
-  font-size: 0.85rem;
-}
-#portfolio-flters li.active,
-#portfolio-flters li:hover {
-  color: var(--primary);
-  border-color: var(--primary);
-}
-.portfolio-card {
-  border: none;
-  border-radius: 10px;
-  overflow: hidden;
-  transition: transform 0.4s;
-  box-shadow: 0 2px 12px rgba(0,0,0,0.08);
-  max-width: 350px;
-  margin: auto;
-}
-.portfolio-card img {
-  width: 100%;
-  display: block;
-  border-radius: 10px;
-  max-height: 200px;
-  object-fit: cover;
-}
-.portfolio-card:hover {
-  transform: scale(1.03);
-}
-.portfolio-overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(98, 68, 197, 0.9);
-  opacity: 0;
-  transition: opacity 0.3s;
-  border-radius: 10px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 1rem;
-}
-.portfolio-card:hover .portfolio-overlay {
-  opacity: 1;
-}
-.portfolio-overlay a {
-  color: #fff;
-  font-size: 1.25rem;
-}
-
 /* REFERENCES SECTION */
 #references {
   padding: 4rem 0;
@@ -355,9 +310,6 @@ body {
 }
 .reference-block:hover {
   transform: translateY(-3px);
-}
-.reference-block .card-body {
-  padding: 1rem;
 }
 .reference-role {
   font-style: italic;
@@ -395,7 +347,7 @@ footer {
   text-align: center;
 }
 
-/* NEW NAVIGATION CONTROLS - Using Anchor Tags */
+/* NEW NAVIGATION CONTROLS */
 .controls {
   position: fixed;
   z-index: 1000;
@@ -438,12 +390,10 @@ footer {
     display: block;
     margin: 1rem auto;
   }
-  /* Center the absolute slides on mobile */
   .hero-img-container .slide {
     left: 50%;
     transform: translateX(-50%);
   }
-  /* Controls: horizontal layout centered at the bottom */
   .controls {
     top: auto;
     bottom: 0;
