@@ -4,7 +4,7 @@
     <meta charset="utf-8" />
     <title>Abirami Sivakumar - Portfolio</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="description" content="Portfolio of Abirami Sivakumar: Project Management, Product Management &amp; Operations" />
+    <meta name="description" content="Portfolio of Abirami Sivakumar: Engineering Management, Hackathons, Leadership, Web Development" />
     <meta name="keywords" content="Abirami Sivakumar, Portfolio, Engineering Management, Hackathons, Leadership, Web Development" />
 
     <!-- Favicon -->
@@ -79,8 +79,25 @@
           <!-- Image Column -->
           <div class="col-lg-6 text-center position-relative">
             <div class="hero-img-container">
-              <img src="img/profile.png" alt="Abirami Sivakumar" class="img-fluid hero-img slide active wow zoomIn" data-wow-delay="0.3s" />
-              <img src="img/profile1copy.png" alt="Abirami Sivakumar" class="img-fluid hero-img slide wow zoomIn" data-wow-delay="0.3s" />
+              <!-- Using srcset for responsive images and lazy loading -->
+              <img 
+                src="img/profile.png" 
+                srcset="img/profile-small.png 480w, img/profile.png 800w" 
+                sizes="(max-width: 600px) 480px, 800px"
+                alt="Abirami Sivakumar" 
+                class="img-fluid hero-img slide active wow zoomIn" 
+                data-wow-delay="0.3s"
+                loading="lazy"
+              />
+              <img 
+                src="img/profile1copy.png" 
+                srcset="img/profile1copy-small.png 480w, img/profile1copy.png 800w" 
+                sizes="(max-width: 600px) 480px, 800px"
+                alt="Abirami Sivakumar" 
+                class="img-fluid hero-img slide wow zoomIn" 
+                data-wow-delay="0.3s"
+                loading="lazy"
+              />
             </div>
           </div>
         </div>
@@ -96,7 +113,7 @@
             “Engineering is the closest thing to magic that exists in the world.” – Elon Musk
           </blockquote>
           <p class="card-text">
-            Hi, I am Abirami, an Engineering Management student standing at the sweet intersection of technology and management—where logic meets leadership and coffee fuels creativity. With a strong grasp of both technical and managerial principles, I turn complex challenges into structured, strategic solutions.
+            Hi, I am Abirami, an Engineering Management student standing at the intersection of technology and management—where logic meets leadership and coffee fuels creativity. With a strong grasp of both technical and managerial principles, I turn complex challenges into structured, strategic solutions.
           </p>
           <p class="card-text">
             Over the past four years, I’ve immersed myself in hackathons and multiple projects. With my ongoing master’s, I have mastered teamwork, leadership, and even last-minute caffeine-fueled debugging. Below are some areas where I excel:
@@ -132,8 +149,24 @@
               </div>
             </div>
           </div>
+
+          <!-- SKILLS TAGS in About Me -->
+          <h3 class="mt-4">My Skills</h3>
+          <div class="skill-tags">
+            <span class="skill-tag">UI/UX</span>
+            <span class="skill-tag">Project Management</span>
+            <span class="skill-tag">Product Management</span>
+            <span class="skill-tag">Supply Chain Management</span>
+            <span class="skill-tag">Data Analysis</span>
+            <span class="skill-tag">Operations</span>
+            <span class="skill-tag">Agile Management</span>
+            <span class="skill-tag">Front End Development</span>
+            <span class="skill-tag">Flutter Development</span>
+            <span class="skill-tag">Website Development</span>
+          </div>
+
           <p class="card-text mt-4">
-            On the technical side, I bring expertise in Web Development, Flutter Development, and UI/UX Design. After all, “A good UI is like a joke—if you have to explain it, it's not that good.” I thrive in collaborative settings, love problem-solving, and aim to be the bridge between engineering and management.
+            On the technical side, I bring expertise in Web Development, Flutter Development, and UI/UX Design. After all, “A good UI is like a joke—if you have to explain it, it's not that good.” I thrive in collaborative settings and aim to be the bridge between engineering and management.
           </p>
           <p class="card-text">
             “The only way to do great work is to love what you do.” – Steve Jobs. I absolutely love learning, building, and leading! 🚀
@@ -154,7 +187,7 @@
                 <h4 class="card-title">Vice President - Department of Computer Science and Engineering, SKCET</h4>
                 <p class="card-text">
                   "Turning students into future tech leaders, one seminar at a time!"<br />
-                  Developed student development programs that fueled self-improvement and career growth while organizing engaging seminars and workshops.
+                  Developed student programs and organized engaging seminars and workshops.
                 </p>
               </div>
             </div>
@@ -166,7 +199,7 @@
                 <h4 class="card-title">Core Team Member - HackClub</h4>
                 <p class="card-text">
                   "Hackathons, chaos, and innovation—just another day at work!"<br />
-                  Led inter-college hackathons and webinars while mentoring fellow students in competitive coding (and debugging at 3 AM).
+                  Led inter-college hackathons and webinars while mentoring fellow students.
                 </p>
               </div>
             </div>
@@ -178,7 +211,7 @@
                 <h4 class="card-title">Co-Founder - Diva Develops, Women Club - SKCET</h4>
                 <p class="card-text">
                   "Empowering women in tech, one line of code at a time!"<br />
-                  Created a supportive community for women in STEM, fostering collaboration, leadership, and engagement.
+                  Created a supportive community for women in STEM, fostering collaboration and leadership.
                 </p>
               </div>
             </div>
@@ -632,15 +665,14 @@
       </div>
     </section>
 
-    <!-- NEW NAVIGATION CONTROLS -->
-    <div class="controls" id="controls">
-      <a href="#home" class="control active-btn"><i class="fas fa-home"></i></a>
-      <a href="#about-me" class="control"><i class="fas fa-user"></i></a>
-      <a href="#leadership" class="control"><i class="fas fa-users"></i></a>
-      <a href="#projects" class="control"><i class="fas fa-rocket"></i></a>
-      <a href="#hackathons" class="control"><i class="fas fa-trophy"></i></a>
-      <a href="#contact" class="control"><i class="fas fa-envelope-open"></i></a>
-    </div>
+    <!-- NEW NAVIGATION CONTROLS (with aria-label for accessibility) -->
+    <nav class="controls" id="controls" aria-label="Main Navigation">
+      <a href="#home" class="control active-btn" aria-label="Home"><i class="fas fa-home"></i></a>
+      <a href="#about-me" class="control" aria-label="About Me"><i class="fas fa-user"></i></a>
+      <a href="#projects" class="control" aria-label="Projects & Innovations"><i class="fas fa-rocket"></i></a>
+      <a href="#contact" class="control" aria-label="Contact"><i class="fas fa-envelope-open"></i></a>
+      <!-- Leadership and Hackathons buttons removed from nav (their sections remain available) -->
+    </nav>
 
     <!-- FOOTER -->
     <footer class="py-3 bg-dark text-white">
@@ -654,20 +686,20 @@
       <i class="bi bi-arrow-up"></i>
     </a>
 
-    <!-- JAVASCRIPT LIBRARIES -->
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="lib/wow/wow.min.js"></script>
-    <script src="lib/easing/easing.min.js"></script>
-    <script src="lib/waypoints/waypoints.min.js"></script>
-    <script src="lib/typed/typed.min.js"></script>
-    <script src="lib/counterup/counterup.min.js"></script>
-    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
-    <script src="lib/isotope/isotope.pkgd.min.js"></script>
-    <script src="lib/lightbox/js/lightbox.min.js"></script>
+    <!-- JAVASCRIPT LIBRARIES (using defer where appropriate) -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js" defer></script>
+    <script src="lib/wow/wow.min.js" defer></script>
+    <script src="lib/easing/easing.min.js" defer></script>
+    <script src="lib/waypoints/waypoints.min.js" defer></script>
+    <script src="lib/typed/typed.min.js" defer></script>
+    <script src="lib/counterup/counterup.min.js" defer></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js" defer></script>
+    <script src="lib/isotope/isotope.pkgd.min.js" defer></script>
+    <script src="lib/lightbox/js/lightbox.min.js" defer></script>
     <!-- PARTICLES.JS LIBRARY -->
-    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js" defer></script>
     <!-- CUSTOM JAVASCRIPT -->
-    <script src="js/main.js"></script>
+    <script src="js/main.js" defer></script>
   </body>
 </html>

@@ -25,6 +25,7 @@ body {
   font-family: 'Poppins', sans-serif;
   color: var(--dark);
   line-height: 1.6;
+  background-color: var(--light);
 }
 
 /* UTILITY CLASSES */
@@ -33,11 +34,13 @@ body {
 .btn-primary {
   background-color: var(--primary);
   border-color: var(--primary);
-  transition: background-color 0.3s;
+  transition: background-color 0.3s, transform 0.3s;
 }
-.btn-primary:hover {
+.btn-primary:hover,
+.btn-primary:focus {
   background-color: var(--dark);
   border-color: var(--dark);
+  transform: scale(1.02);
 }
 
 /* SPINNER */
@@ -98,7 +101,8 @@ body {
   justify-content: center;
   transition: transform 0.3s;
 }
-.social-icons .btn:hover {
+.social-icons .btn:hover,
+.social-icons .btn:focus {
   transform: scale(1.1);
 }
 .hero-section .contact-details p {
@@ -106,7 +110,7 @@ body {
   font-size: 0.95rem;
 }
 .hero-img {
-  max-width: 80%;
+  max-width: 100%;
   height: auto;
   border: none;
   box-shadow: none;
@@ -168,6 +172,7 @@ body {
   transition: transform 0.3s;
   border-radius: 10px;
   padding: 2rem;
+  background-color: #fff;
 }
 #about-me .card:hover {
   transform: translateY(-5px);
@@ -187,14 +192,32 @@ body {
   border-radius: 8px;
   text-align: center;
   transition: transform 0.3s;
+  padding: 1rem;
 }
-.expertise-card:hover {
+.expertise-card:hover,
+.expertise-card:focus {
   transform: translateY(-3px);
 }
 .expertise-icon {
   font-size: 2rem;
   color: var(--primary);
   margin-bottom: 0.5rem;
+}
+
+/* SKILLS TAGS STYLING */
+.skill-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+.skill-tag {
+  background-color: var(--primary);
+  color: #fff;
+  padding: 0.3rem 0.8rem;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: 500;
 }
 
 /* LEADERSHIP & COMMUNITY SECTION */
@@ -212,6 +235,7 @@ body {
   border-left: 4px solid var(--primary);
   border-radius: 5px;
   padding: 0.8rem;
+  background-color: #fff;
 }
 #leadership .journey-card:hover {
   transform: translateY(-5px);
@@ -259,8 +283,11 @@ body {
   max-width: 350px;
   margin: auto;
   position: relative;
+  background-color: #fff;
+  padding: 1rem;
 }
-.portfolio-card:hover {
+.portfolio-card:hover,
+.portfolio-card:focus {
   transform: scale(1.03);
 }
 
@@ -278,8 +305,10 @@ body {
   transition: transform 0.3s, box-shadow 0.3s;
   border-radius: 10px;
   padding: 0.8rem;
+  background-color: #fff;
 }
-.achievement-card:hover {
+.achievement-card:hover,
+.achievement-card:focus {
   transform: translateY(-5px);
   box-shadow: 0 4px 16px rgba(0,0,0,0.1);
 }
@@ -307,8 +336,10 @@ body {
   transition: transform 0.3s;
   border-radius: 10px;
   padding: 0.8rem;
+  background-color: #fff;
 }
-.reference-block:hover {
+.reference-block:hover,
+.reference-block:focus {
   transform: translateY(-3px);
 }
 .reference-role {
@@ -357,6 +388,7 @@ footer {
   flex-direction: column;
   align-items: center;
   transform: translateY(-50%);
+  transition: opacity 0.3s;
 }
 .controls a.control {
   padding: 1rem;
@@ -414,5 +446,16 @@ footer {
   }
   .controls a.active-btn {
     background-color: var(--secondary) !important;
+  }
+  
+  /* Adjust typography on smaller devices */
+  h1.display-5 {
+    font-size: 1.75rem;
+  }
+  h2.display-4 {
+    font-size: 2rem;
+  }
+  .card-text {
+    font-size: 0.95rem;
   }
 }
