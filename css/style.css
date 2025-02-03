@@ -468,4 +468,8 @@ footer {
   .controls a.active-btn {
     background-color: var(--secondary) !important;
   }
+  /* Hide Back-to-Top Button on Mobile */
+  .back-to-top {
+    display: none !important;
+  }
 }
