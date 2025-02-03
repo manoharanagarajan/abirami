@@ -146,4 +146,15 @@
     },
     "retina_detect": true
   });
+
+  // NEW: Automatic hero image slideshow with blur transition
+  setInterval(function(){
+    var $slides = $('.hero-img-container .slide');
+    var $active = $slides.filter('.active');
+    var index = $slides.index($active);
+    var nextIndex = (index + 1) % $slides.length;
+    $active.removeClass('active');
+    $slides.eq(nextIndex).addClass('active');
+  }, 5000); // Change image every 5 seconds
+
 })(jQuery);
