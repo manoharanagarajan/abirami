@@ -1,6 +1,6 @@
 /* BASE SETTINGS & VARIABLES */
 :root {
-  --primary: #6244C5;        /* Deep purple for light mode accents */
+  --primary: #0f2971;        /* Deep purple for light mode accents */
   --secondary: #FFC448;      /* Yellow for active state in light mode */
   --light: #FAFAFB;          /* Light background */
   --dark: #12141D;           /* Dark text */
