@@ -4,8 +4,17 @@
     <meta charset="utf-8" />
     <title>Abirami Sivakumar - Portfolio</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="description" content="Portfolio of Abirami Sivakumar: Engineering Management, Hackathons, Leadership, Web Development" />
-    <meta name="keywords" content="Abirami Sivakumar, Portfolio, Engineering Management, Hackathons, Leadership, Web Development" />
+    <meta
+      name="description"
+      content="Portfolio of Abirami Sivakumar: Engineering Management, Hackathons, Leadership, Web Development"
+    />
+    <meta
+      name="keywords"
+      content="Abirami Sivakumar, Portfolio, Engineering Management, Hackathons, Leadership, Web Development"
+    />
+
+    <!-- Preload hero image for faster load -->
+    <link rel="preload" as="image" href="img/profile1copy.png" />
 
     <!-- Favicon -->
     <link rel="icon" href="img/favicon.ico" />
@@ -19,8 +28,14 @@
     />
 
     <!-- Icon Font Stylesheets -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet" />
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet" />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
 
     <!-- Bootstrap CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet" />
@@ -32,6 +47,17 @@
 
     <!-- Custom Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet" />
+
+    <!-- Custom inline styles for project logos -->
+    <style>
+      .project-logo {
+        max-width: 60px;
+        margin-bottom: 1rem;
+      }
+      .project-logo-container {
+        text-align: center;
+      }
+    </style>
   </head>
   <body data-bs-spy="scroll" data-bs-target="#controls" data-bs-offset="80">
     <!-- Full Screen Particles.js Container -->
@@ -39,7 +65,11 @@
 
     <!-- Spinner -->
     <div id="spinner" class="show d-flex align-items-center justify-content-center">
-      <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
+      <div
+        class="spinner-border text-primary"
+        style="width: 3rem; height: 3rem;"
+        role="status"
+      >
         <span class="visually-hidden">Loading...</span>
       </div>
     </div>
@@ -57,10 +87,16 @@
               Project Management, Product Management, Operations
             </div>
             <div class="mt-3">
-              <a href="Abirami_Sivakumar_CV.pdf" class="btn btn-primary me-3" target="_blank">Download CV</a>
+              <a href="Abirami_Sivakumar_CV.pdf" class="btn btn-primary me-3" target="_blank"
+                >Download CV</a
+              >
             </div>
             <div class="mt-3 d-flex justify-content-center justify-content-lg-start gap-3 social-icons">
-              <a href="https://www.linkedin.com/in/abirami-sivakumar-368955210/" target="_blank" class="btn btn-icon">
+              <a
+                href="https://www.linkedin.com/in/abirami-sivakumar-368955210/"
+                target="_blank"
+                class="btn btn-icon"
+              >
                 <i class="fab fa-linkedin-in"></i>
               </a>
               <a href="https://github.com/Abiraamii" target="_blank" class="btn btn-icon">
@@ -79,16 +115,14 @@
           <!-- Image Column -->
           <div class="col-lg-6 text-center position-relative">
             <div class="hero-img-container">
-              <!-- Using srcset for responsive images and lazy loading -->
-        
-              <img 
-                src="img/profile1copy.png" 
-                srcset="img/profile1copy-small.png 480w, img/profile1copy.png 800w" 
+              <!-- Removed lazy loading so image loads immediately -->
+              <img
+                src="img/profile1copy.png"
+                srcset="img/profile1copy-small.png 480w, img/profile1copy.png 800w"
                 sizes="(max-width: 700px) 480px, 800px"
-                alt="Abirami Sivakumar" 
-                class="img-fluid hero-img slide wow zoomIn" 
+                alt="Abirami Sivakumar"
+                class="img-fluid hero-img slide wow zoomIn active"
                 data-wow-delay="0.3s"
-                loading="lazy"
               />
             </div>
           </div>
@@ -176,7 +210,9 @@
           <div class="col-md-6">
             <div class="card journey-card wow fadeInUp" data-wow-delay="0.1s">
               <div class="card-body">
-                <h4 class="card-title">Vice President - Department of Computer Science and Engineering, SKCET</h4>
+                <h4 class="card-title">
+                  Vice President - Department of Computer Science and Engineering, SKCET
+                </h4>
                 <p class="card-text">
                   "Turning students into future tech leaders, one seminar at a time!"<br />
                   Developed student programs and organized engaging seminars and workshops.
@@ -200,7 +236,9 @@
           <div class="col-md-6">
             <div class="card journey-card wow fadeInUp" data-wow-delay="0.2s">
               <div class="card-body">
-                <h4 class="card-title">Co-Founder - Diva Develops, Women Club - SKCET</h4>
+                <h4 class="card-title">
+                  Co-Founder - Diva Develops, Women Club - SKCET
+                </h4>
                 <p class="card-text">
                   "Empowering women in tech, one line of code at a time!"<br />
                   Created a supportive community for women in STEM, fostering collaboration and leadership.
@@ -208,17 +246,7 @@
               </div>
             </div>
           </div>
-          <div class="col-md-6"></div>
-            <div class="card journey-card wow fadeInUp" data-wow-delay="0.1s">
-              <div class="card-body">
-                <h4 class="card-title">Vice President - Department of Computer Science and Engineering, SKCET</h4>
-                <p class="card-text">
-                  "Turning students into future tech leaders, one seminar at a time!"<br />
-                  Developed student programs and organized engaging seminars and workshops.
-                </p>
-              </div>
-            </div>
-          </div>
+          <!-- Duplicate card removed if not needed -->
           <!-- Card 4 -->
           <div class="col-md-6">
             <div class="card journey-card wow fadeInUp" data-wow-delay="0.25s">
@@ -264,7 +292,9 @@
                 </div>
                 <h4 class="card-title">Bachelor of Computer Science and Engineering</h4>
                 <h6 class="card-subtitle mb-2 text-muted">2020 – 2024</h6>
-                <p class="card-text">Sri Krishna College of Engineering and Technology, Anna University, India</p>
+                <p class="card-text">
+                  Sri Krishna College of Engineering and Technology, Anna University, India
+                </p>
               </div>
             </div>
           </div>
@@ -325,6 +355,13 @@
           <!-- Project Card 1 -->
           <div class="col-lg-4 col-md-6 portfolio-item">
             <div class="card portfolio-card wow fadeInUp" data-wow-delay="0.1s">
+              <div class="project-logo-container">
+                <img
+                  src="img/logo-foodescapade.png"
+                  alt="Food Escapade Logo"
+                  class="project-logo"
+                />
+              </div>
               <div class="card-body">
                 <h5 class="card-title">🍽 FOOD ESCAPADE</h5>
                 <p class="card-text">
@@ -336,6 +373,13 @@
           <!-- Project Card 2 -->
           <div class="col-lg-4 col-md-6 portfolio-item">
             <div class="card portfolio-card wow fadeInUp" data-wow-delay="0.15s">
+              <div class="project-logo-container">
+                <img
+                  src="img/logo-skcetconnect.png"
+                  alt="SKCET Connect Logo"
+                  class="project-logo"
+                />
+              </div>
               <div class="card-body">
                 <h5 class="card-title">🎓 SKCET Connect</h5>
                 <p class="card-text">
@@ -347,6 +391,13 @@
           <!-- Project Card 3 -->
           <div class="col-lg-4 col-md-6 portfolio-item">
             <div class="card portfolio-card wow fadeInUp" data-wow-delay="0.2s">
+              <div class="project-logo-container">
+                <img
+                  src="img/logo-womentr.png"
+                  alt="WoMentr Logo"
+                  class="project-logo"
+                />
+              </div>
               <div class="card-body">
                 <h5 class="card-title">👩‍💻 WoMentr</h5>
                 <p class="card-text">
@@ -358,6 +409,13 @@
           <!-- Project Card 4 -->
           <div class="col-lg-4 col-md-6 portfolio-item">
             <div class="card portfolio-card wow fadeInUp" data-wow-delay="0.25s">
+              <div class="project-logo-container">
+                <img
+                  src="img/logo-vaccify.png"
+                  alt="Vaccify Logo"
+                  class="project-logo"
+                />
+              </div>
               <div class="card-body">
                 <h5 class="card-title">💉 VACCIFY</h5>
                 <p class="card-text">
@@ -369,6 +427,13 @@
           <!-- Project Card 5 -->
           <div class="col-lg-4 col-md-6 portfolio-item">
             <div class="card portfolio-card wow fadeInUp" data-wow-delay="0.3s">
+              <div class="project-logo-container">
+                <img
+                  src="logo/udyamee.jpeg"
+                  alt="Udyamee Logo"
+                  class="project-logo"
+                />
+              </div>
               <div class="card-body">
                 <h5 class="card-title">🌾 UDYAMEE</h5>
                 <p class="card-text">
@@ -380,6 +445,13 @@
           <!-- Project Card 6 -->
           <div class="col-lg-4 col-md-6 portfolio-item">
             <div class="card portfolio-card wow fadeInUp" data-wow-delay="0.35s">
+              <div class="project-logo-container">
+                <img
+                  src="img/logo-tickbox.png"
+                  alt="Tickbox Logo"
+                  class="project-logo"
+                />
+              </div>
               <div class="card-body">
                 <h5 class="card-title">📚 TICKBOX</h5>
                 <p class="card-text">
@@ -391,6 +463,13 @@
           <!-- Project Card 7 -->
           <div class="col-lg-4 col-md-6 portfolio-item">
             <div class="card portfolio-card wow fadeInUp" data-wow-delay="0.4s">
+              <div class="project-logo-container">
+                <img
+                  src="img/logo-shero.png"
+                  alt="Shero Logo"
+                  class="project-logo"
+                />
+              </div>
               <div class="card-body">
                 <h5 class="card-title">🦸‍♀️ SHERO</h5>
                 <p class="card-text">
@@ -402,6 +481,13 @@
           <!-- Project Card 8 -->
           <div class="col-lg-4 col-md-6 portfolio-item">
             <div class="card portfolio-card wow fadeInUp" data-wow-delay="0.45s">
+              <div class="project-logo-container">
+                <img
+                  src="img/logo-virtup.png"
+                  alt="Virtup Logo"
+                  class="project-logo"
+                />
+              </div>
               <div class="card-body">
                 <h5 class="card-title">💼 VIRTUP</h5>
                 <p class="card-text">
@@ -413,6 +499,13 @@
           <!-- Project Card 9 -->
           <div class="col-lg-4 col-md-6 portfolio-item">
             <div class="card portfolio-card wow fadeInUp" data-wow-delay="0.5s">
+              <div class="project-logo-container">
+                <img
+                  src="img/logo-trainmonitor.png"
+                  alt="Train Monitoring Logo"
+                  class="project-logo"
+                />
+              </div>
               <div class="card-body">
                 <h5 class="card-title">🚆 Conditional Monitoring of Electric Trains</h5>
                 <p class="card-text">
@@ -615,13 +708,25 @@
               <p><strong>Phone:</strong> +353 (89) 201 7376</p>
               <p><strong>Email:</strong> abiramiioffl@gmail.com</p>
               <div class="social-icons mt-2">
-                <a href="https://www.linkedin.com/in/abirami-sivakumar-368955210/" target="_blank" class="btn btn-icon">
+                <a
+                  href="https://www.linkedin.com/in/abirami-sivakumar-368955210/"
+                  target="_blank"
+                  class="btn btn-icon"
+                >
                   <i class="fab fa-linkedin-in"></i>
                 </a>
-                <a href="https://github.com/Abiraamii" target="_blank" class="btn btn-icon">
+                <a
+                  href="https://github.com/Abiraamii"
+                  target="_blank"
+                  class="btn btn-icon"
+                >
                   <i class="fab fa-github"></i>
                 </a>
-                <a href="https://devpost.com/abiramii" target="_blank" class="btn btn-icon">
+                <a
+                  href="https://devpost.com/abiramii"
+                  target="_blank"
+                  class="btn btn-icon"
+                >
                   <i class="fas fa-laptop-code"></i>
                 </a>
               </div>
@@ -668,13 +773,12 @@
       </div>
     </section>
 
-    <!-- NEW NAVIGATION CONTROLS (with aria-label for accessibility) -->
+    <!-- NEW NAVIGATION CONTROLS -->
     <nav class="controls" id="controls" aria-label="Main Navigation">
       <a href="#home" class="control active-btn" aria-label="Home"><i class="fas fa-home"></i></a>
       <a href="#about-me" class="control" aria-label="About Me"><i class="fas fa-user"></i></a>
       <a href="#projects" class="control" aria-label="Projects & Innovations"><i class="fas fa-rocket"></i></a>
       <a href="#contact" class="control" aria-label="Contact"><i class="fas fa-envelope-open"></i></a>
-      <!-- Leadership and Hackathons buttons removed from nav (their sections remain available) -->
     </nav>
 
     <!-- FOOTER -->
@@ -689,7 +793,7 @@
       <i class="bi bi-arrow-up"></i>
     </a>
 
-    <!-- JAVASCRIPT LIBRARIES (using defer where appropriate) -->
+    <!-- JAVASCRIPT LIBRARIES -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js" defer></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js" defer></script>
     <script src="lib/wow/wow.min.js" defer></script>
@@ -704,5 +808,7 @@
     <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js" defer></script>
     <!-- CUSTOM JAVASCRIPT -->
     <script src="js/main.js" defer></script>
+
+    
   </body>
 </html>
