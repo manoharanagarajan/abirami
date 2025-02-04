@@ -1,12 +1,12 @@
 /* BASE SETTINGS & VARIABLES */
 :root {
-  --primary: #0f2971;        /* Deep purple for light mode accents */
-  --secondary: #FFC448;      /* Yellow for active state in light mode */
+  --primary: #0f2971;        /* Deep purple */
+  --secondary: #FFC448;      /* Yellow accent */
   --light: #FAFAFB;          /* Light background */
   --dark: #12141D;           /* Dark text */
 }
 
-/* Dark mode variables override when body has dark-mode class */
+/* Dark mode override */
 body.dark-mode {
   --primary: #FFC448;
   --secondary: #6244C5;
@@ -162,7 +162,7 @@ body {
   pointer-events: none;
 }
 
-/* UPDATED ABOUT ME SECTION */
+/* ABOUT ME SECTION */
 #about-me {
   padding: 4rem 0;
 }
@@ -185,7 +185,7 @@ body {
   margin: 1rem 0;
 }
 
-/* Expertise Cards in About Me */
+/* Expertise Cards */
 .expertise-card {
   background: var(--light);
   border: 1px solid #e0e0e0;
@@ -204,7 +204,7 @@ body {
   margin-bottom: 0.5rem;
 }
 
-/* SKILLS TAGS STYLING */
+/* Skills Tags */
 .skill-tags {
   display: flex;
   flex-wrap: wrap;
@@ -291,7 +291,31 @@ body {
   transform: scale(1.03);
 }
 
-/* HACKATHON WINS & ACHIEVEMENTS SECTION */
+/* UPDATED PROJECT LOGO DESIGN FOR SQUARE LOGOS */
+.project-logo-container {
+  position: relative;
+  width: 140px;
+  height: 140px;
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto 1.2rem auto;
+  transition: transform 0.3s ease;
+  /* Since logos are square, we use 0 border radius */
+  border-radius: 0;
+}
+.project-logo-container:hover {
+  transform: scale(1.1);
+}
+.project-logo {
+  max-width: 150px;
+  max-height: 150px;
+  display: block;
+  margin: auto;
+}
+
+/* HACKATHON & ACHIEVEMENTS SECTION */
 #hackathons {
   padding: 4rem 0;
 }
@@ -447,8 +471,6 @@ footer {
   .controls a.active-btn {
     background-color: var(--secondary) !important;
   }
-  
-  /* Adjust typography on smaller devices */
   h1.display-5 {
     font-size: 1.75rem;
   }
