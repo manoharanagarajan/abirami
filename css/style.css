@@ -291,7 +291,7 @@ body {
   transform: scale(1.03);
 }
 
-/* UPDATED PROJECT LOGO DESIGN FOR SQUARE LOGOS */
+/* UPDATED PROJECT LOGO DESIGN FOR BIG SQUARE LOGOS */
 .project-logo-container {
   position: relative;
   width: 140px;
@@ -302,15 +302,14 @@ body {
   align-items: center;
   margin: 0 auto 1.2rem auto;
   transition: transform 0.3s ease;
-  /* Since logos are square, we use 0 border radius */
-  border-radius: 0;
+  border-radius: 0; /* square container */
 }
 .project-logo-container:hover {
   transform: scale(1.1);
 }
 .project-logo {
-  max-width: 150px;
-  max-height: 150px;
+  max-width: 110px;
+  max-height: 110px;
   display: block;
   margin: auto;
 }
